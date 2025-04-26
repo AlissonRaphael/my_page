@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@import './fonts.css';
+
+.title-light {
+  font-family: 'NeueMachina', sans-serif;
+  font-weight: 300;
+}
+
+.title-regular {
+  font-family: 'NeueMachina', sans-serif;
+  font-weight: 400;
+}
+
+.title-bold {
+  font-family: 'NeueMachina', sans-serif;
+  font-weight: 800;
+}
