@@ -8,4 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: './',
+  build: {
+    assetsDir: './assets',
+    emptyOutDir: true,
+    assetsInlineLimit: 4096,
+  },
 })
