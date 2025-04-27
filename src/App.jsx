@@ -1,7 +1,9 @@
 import "./styles/index.css";
 
+import Main from "./components/Main";
+
 export default function App() {
   return (
-    <h2 className="text-amber-200 text-6xl title-bold">Hello! My name is Alisson Oliveira*</h2>
+    <Main />
   )
 }
