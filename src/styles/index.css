@@ -2,17 +2,32 @@
 
 @import './fonts.css';
 
-.title-light {
+.neue-light {
   font-family: 'NeueMachina', sans-serif;
   font-weight: 300;
 }
 
-.title-regular {
+.neue-regular {
   font-family: 'NeueMachina', sans-serif;
   font-weight: 400;
 }
 
-.title-bold {
+.neue-bold {
   font-family: 'NeueMachina', sans-serif;
   font-weight: 800;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
