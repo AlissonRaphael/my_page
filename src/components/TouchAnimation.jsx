@@ -9,7 +9,11 @@ export default function Touch() {
         rotate: [-45, -50, -5],
         translateY: [0, 2, -15],
       }}
-      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        ease: "easeOut",
+      }}
     >
       <Pointer className="stroke-gray-300" size={22} />
     </motion.div>
@@ -18,7 +22,11 @@ export default function Touch() {
       animate={{
         translateY: [0, 2, -15],
       }}
-      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        ease: "easeOut",
+      }}>
         explore
       </motion.div>
   </motion.div>
