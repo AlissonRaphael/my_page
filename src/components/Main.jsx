@@ -1,14 +1,16 @@
 import { X } from 'lucide-react';
 import IconRotation from "./IconRotation";
 import Touch from './TouchAnimation';
+import TextScrollOut from './TextScrollOut';
+import ImageZoom from './ImageZoom';
+
+import Foto from '../assets/foto.jpg'
 
 export default function Main() {
 
   return <div className="w-screen h-screen flex flex-col relative">
     <div className="px-4 py-2 w-screen flex justify-between items-center text-gray-100">
-      <IconRotation>
-        <X className="stroke-gray-100" size={18} />
-      </IconRotation>
+      <div>/</div>
       <div>en</div>
     </div>
 
@@ -24,25 +26,26 @@ export default function Main() {
         </div>
       </div>
 
-      <div className="row-span-8 flex ">
+      <div className="row-span-8 flex">
         <div className="poppins-bold pr-6 text-4xl text-right" style={{ writingMode: 'sideways-lr' }}>
-          alisson oliveira
+          <span className="text-main">alisson</span> oliveira<span className="text-main">.</span>
         </div>
-        <div className="bg-gray-800 flex-1">
-          
+        <div className="flex-1 border-1 border-gray-800">
+          <ImageZoom src={Foto} alt="Foto de Alisson" />
         </div>
       </div>
 
-      <div className="absolute inset-y-0 right-0 pr-6 flex">
-        <Touch />
+      <div className="row-span-1 flex">
+        <TextScrollOut />
       </div>
-  
+
+      <Touch />
     </div>
 
     <div className="px-4 py-2 w-screen flex justify-between items-center text-gray-100">
-      /
+      <IconRotation>
+        <X className="stroke-gray-100" size={18} />
+      </IconRotation>
     </div>
   </div>
 }
-
-// A human,<br/> buggy, but constantly updating.
