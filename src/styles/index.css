@@ -2,6 +2,19 @@
 
 @import './fonts.css';
 
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.bg-main {
+  background-color: #ff6347;
+}
+
+.text-main {
+  color: #ff6347;
+}
+
 .neue-light {
   font-family: 'NeueMachina', sans-serif;
   font-weight: 300;
