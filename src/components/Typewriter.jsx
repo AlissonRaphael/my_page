@@ -10,8 +10,9 @@ export default function Typewriter({ text, className, initialDelay }) {
       return <motion.span
         key={index}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
         transition={{ delay, ease: 'anticipate', duration: 0.4 }}
+        viewport={{ once: true }}
       >
         {char}
       </motion.span>
