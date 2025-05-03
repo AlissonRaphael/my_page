@@ -17,7 +17,7 @@ export default function Touch() {
     return null
   }
 
-  return <div className="absolute inset-y-0 right-0 pr-6 flex">
+  return <div className="absolute inset-y-0 right-0 pr-8 flex">
     <div className="flex items-center">
       <motion.div
         className="w-6 h-6"

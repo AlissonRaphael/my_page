@@ -13,11 +13,11 @@ export default function ImageZoom({ src, alt }) {
   useMotionValueEvent(scrollYProgress, "change", (latest) => console.log(latest))
   const easedScale = useSpring(scale, { stiffness: 100, damping: 20 });
 
-  return <div ref={ref} className="overflow-hidden h-full w-full">
+  return <div ref={ref} className="overflow-hidden">
     <motion.img
       src={src}
       alt={alt}
-      className="object-cover origin-center h-full w-full"
+      className="object-cover origin-center"
       style={{ scale: easedScale }}
       initial={{ scale: 1.5 }}
       animate={{ scale: 1 }}

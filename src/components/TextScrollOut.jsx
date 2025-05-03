@@ -13,11 +13,11 @@ export default function TextScrollOut() {
 
   return <div ref={ref} className="relative flex items-center w-full">
       <motion.div
-        className="absolute text-xs text-gray-500 text-right pr-2 w-100 bg-gray-950"
+        className="absolute text-xs text-gray-500 text-right pr-2 w-full bg-gray-950"
         style={{ right: easedRight }}
       >
         A human, buggy, but constantly updating
       </motion.div>
-      <div className="bg-gray-500 w-100 h-[1px]"></div>
+      <div className="bg-gray-500 w-full h-[1px]"></div>
   </div>
 }
