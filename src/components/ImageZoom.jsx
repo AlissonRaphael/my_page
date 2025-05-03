@@ -17,13 +17,14 @@ export default function ImageZoom({ src, alt }) {
     <motion.img
       src={src}
       alt={alt}
-      className="object-cover origin-center"
+      className="object-cover origin-center border-1  border-gray-800"
       style={{ scale: easedScale }}
-      initial={{ scale: 1.5 }}
-      animate={{ scale: 1 }}
+      initial={{ scale: 1.5, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
       transition={{
-        duration: 1,
-        ease: "circOut",
+        delay: 1.7,
+        duration: 2,
+        ease: "circInOut",
       }}
     />
   </div>

@@ -18,7 +18,12 @@ export default function Touch() {
   }
 
   return <div className="absolute inset-y-0 right-0 pr-8 flex">
-    <div className="flex items-center">
+    <motion.div
+      className="flex items-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 5, ease: "easeOut" }}
+    >
       <motion.div
         className="w-6 h-6"
         animate={{ rotate: [-45, -50, -50, -5], translateY: [0, 2, 2, -20] }}
@@ -33,7 +38,7 @@ export default function Touch() {
       >
         explore
       </motion.div>
-    </div>
+    </motion.div>
   </div>
 }
 
