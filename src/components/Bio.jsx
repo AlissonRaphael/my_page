@@ -6,8 +6,8 @@ import Topic from "./Topic"
 import Avatar from '../assets/avatar.jpg'
 
 export default function Bio() {
-  return <div className="mt-12 w-screen flex flex-col items-center relative">
-    <div className="p-8 w-screen max-w-6xl flex flex-col">
+  return <div className="mt-12 w-full flex flex-col items-center relative">
+    <div className="p-8 w-full max-w-6xl flex flex-col">
 
       <Topic icon="user" label={"bio"} path="/profile" />
 

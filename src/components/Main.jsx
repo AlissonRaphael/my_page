@@ -11,17 +11,17 @@ import Foto from '../assets/foto.jpg'
 
 export default function Main() {
 
-  return <div className="w-screen h-screen flex flex-col items-center relative">
+  return <div className="w-full h-screen flex flex-col items-center relative">
     <TouchAnimation />
 
-    <div className="px-4 py-2 w-screen flex justify-between items-center text-gray-100">
+    <div className="px-4 py-2 w-full flex justify-between items-center text-gray-100">
       <IconRotation>
         <Plus className="stroke-gray-100" size={18} />
       </IconRotation>
       <div>en</div>
     </div>
 
-    <div className="pl-12 flex-1 w-screen max-w-6xl">
+    <div className="pl-12 flex-1 w-full max-w-6xl">
 
       <div className="h-3/12 pt-14">
         <motion.h1
@@ -68,7 +68,7 @@ export default function Main() {
 
     </div>
 
-    <div className="px-4 py-2 w-screen flex justify-between items-center text-gray-100">
+    <div className="px-4 py-2 w-full flex justify-between items-center text-gray-100">
       <IconRotation>
         <X className="stroke-gray-100" size={18} />
       </IconRotation>
