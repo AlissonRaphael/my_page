@@ -1,7 +1,7 @@
 import { Mars, MapPin, GraduationCap } from "lucide-react"
 import { motion } from "framer-motion"
 
-import Topic from "./Topic"
+import TopicRight from "./TopicRight"
 
 import Avatar from '../assets/avatar.jpg'
 
@@ -9,7 +9,7 @@ export default function Bio() {
   return <div className="mt-12 w-full flex flex-col items-center relative">
     <div className="p-8 w-full max-w-6xl flex flex-col">
 
-      <Topic icon="user" label={"bio"} path="/profile" />
+      <TopicRight icon="user" label={"bio"} path="/profile" />
 
       <div className="mt-4 p-4 flex justify-between border-b border-gray-800">
         <div className="flex">
