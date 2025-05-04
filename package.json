@@ -10,11 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^12.7.0",
     "lucide-react": "^0.503.0",
     "motion": "^12.9.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "simple-icons": "^14.12.3"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",

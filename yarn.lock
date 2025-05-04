@@ -450,6 +450,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
+"@icons-pack/react-simple-icons@^12.7.0":
+  version "12.7.0"
+  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-12.7.0.tgz#d24e12d93829e6c34b76eb4ede19a67c0fb5a58c"
+  integrity sha512-XpG7e8buAco8AbvCar+4LX5do0L98d/NaeHoTuW4awyUH33id7HQiiMomK+cS1MRxfLNMmhW2W0223/fMC0unw==
+
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.8"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.8.tgz#4f0e06362e01362f823d348f1872b08f666d8142"
@@ -2149,11 +2154,6 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
-
-simple-icons@^14.12.3:
-  version "14.12.3"
-  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-14.12.3.tgz#2228d494786584f83710a1adb58dd36a55121c0e"
-  integrity sha512-P85Pqak4picfTzdujmGL7+pFfsd32K/tDjHPQ8vvJcr2Xk380A9kBVIW5QH86qWqa+YJgFa5huLcUuwmW+YBPQ==
 
 source-map-js@^1.2.1:
   version "1.2.1"
