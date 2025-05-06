@@ -1,63 +1,20 @@
 import { Mars, MapPin, GraduationCap } from "lucide-react"
 import { motion } from "framer-motion"
 
-import TopicRight from "./TopicRight"
-
-import Avatar from '../assets/avatar.jpg'
+import TitleRight from "./TitleRight"
 
 export default function Bio() {
   return <div className="mt-12 w-full flex flex-col items-center relative">
     <div className="p-8 w-full max-w-6xl flex flex-col">
 
-      <TopicRight icon="user" label={"bio"} path="/profile" />
-
-      <div className="mt-4 p-4 flex justify-between border-b border-gray-800">
-        <div className="flex">
-          <div className="overflow-hidden rounded-full">
-            <motion.img
-              className="w-12 h-12"
-              src={Avatar}
-              alt="Alisson profile picture"
-              initial={{ opacity: 0, scale: 2 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ type: "tween", duration: 1.5, ease: "circInOut" }}
-              viewport={{ once: true }}
-            />
-          </div>
-          <motion.div
-            className="ml-4 flex flex-col justify-center"
-            initial="hidden"
-            whileInView="visible"
-            variants={list}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="text-gray-100 text-xl"
-              variants={{
-                hidden: { opacity: 0, x: -5 },
-                visible: { opacity: 1, x: 0 },
-              }}
-              transition={itemTransition}
-            >
-              Alisson Oliveira
-            </motion.div>
-            <motion.div
-              className="text-xs text-gray-400"
-              variants={{
-                hidden: { opacity: 0, x: -5 },
-                visible: { opacity: 1, x: 0 },
-              }}
-              transition={itemTransition}
-            >
-              Fullstack Developer
-            </motion.div>
-          </motion.div>
-        </div>
-
-      </div>
+      <TitleRight
+        title="bio"
+        description="Here you'll find my projects, experiences, and a glimpse into my journey in the world of technology."
+        subtitle="/bio"
+      />
 
       <motion.div
-        className="text-gray-400 p-4 text-sm text-justify indent-8 hyphens-auto border-b border-gray-800"
+        className="text-gray-400 p-4 text-sm text-justify indent-8 hyphens-auto border-b border-gray-800 mt-6"
         initial="hidden"
         whileInView="visible"
         variants={list}

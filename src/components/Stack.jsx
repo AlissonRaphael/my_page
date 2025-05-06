@@ -1,6 +1,5 @@
 import { DynamicIcon } from "lucide-react/dynamic"
 import { motion } from "framer-motion"
-
 import {
   SiJavascript,
   SiJavascriptHex,
@@ -71,15 +70,19 @@ import {
   SiPrettierHex,
 } from "@icons-pack/react-simple-icons"
 
-import TopicLeft from "./TopicLeft"
+import TitleLeft from "./TitleLeft"
 
 export default function Stack() {
   return <div className="mt-12 w-full flex flex-col items-center relative">
     <div className="p-8 w-full max-w-6xl flex flex-col">
-
-      <TopicLeft icon="braces" label="Stack" path="/stack" />
+      <TitleLeft
+        title="welcome"
+        description="Here you'll find my projects, experiences, and a glimpse into my journey in the world of technology."
+        subtitle="/main"
+      />
 
       <div className="mt-4 py-3 text-xs border-l-1 border-gray-700 relative">
+
         <motion.div
           className="absolute bottom-0 flex -left-[1px] w-[3px] bg-gray-950"
           initial={{ height: "100%" }}
@@ -584,7 +587,7 @@ export default function Stack() {
                 Prettier
               </div>
             </motion.div>
-            
+
             <motion.div
               className="mb-1 flex items-center"
               variants={techAnimationItem}

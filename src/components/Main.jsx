@@ -5,7 +5,7 @@ import IconRotation from "./IconRotation";
 import TouchAnimation from './TouchAnimation';
 import TextScrollOut from './TextScrollOut';
 import ImageZoom from './ImageZoom';
-import Typewriter from './Typewriter';
+import TitleLeft from './TitleLeft';
 
 import Foto from '../assets/foto.jpg'
 
@@ -22,28 +22,11 @@ export default function Main() {
     </div>
 
     <div className="pl-12 flex-1 w-full max-w-6xl">
-
       <div className="h-3/12 pt-14">
-        <motion.h1
-          className="text-gray-100 text-xs poppins-bold uppercase tracking-[0.4em]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0,1,0,1,1,0,1,0,0,1,0,1,0,1,1,0,1] }}
-          transition={{ duration: 1, ease: "anticipate" }}
-        >
-          welcome
-        </motion.h1>
-        <motion.div
-          className="mt-2 text-xs max-w-11/12 text-gray-300"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-        >
-          Here you'll find my projects, experiences, and a glimpse into my journey in the world of technology.
-        </motion.div>
-        <Typewriter
-          className="mt-2 text-xs max-w-10/12 text-gray-500"
-          initialDelay={1.2}
-          text="/main"
+        <TitleLeft
+          title="welcome"
+          description="Here you'll find my projects, experiences, and a glimpse into my journey in the world of technology."
+          subtitle="/main"
         />
       </div>
 
