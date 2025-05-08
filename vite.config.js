@@ -14,4 +14,7 @@ export default defineConfig({
     emptyOutDir: true,
     assetsInlineLimit: 4096,
   },
+  server: {
+    host: true,
+  }
 })
