@@ -8,13 +8,14 @@ import ImageZoom from './ImageZoom';
 import TitleLeft from './TitleLeft';
 
 import Foto from '../assets/foto.jpg'
+import DateAnimation from './DateAnimation';
 
 export default function Main() {
 
   return <div className="w-full h-screen flex flex-col items-center relative">
     <TouchAnimation />
 
-    <div className="px-4 py-2 w-full flex justify-between items-center text-gray-100">
+    <div className="px-4 py-2 w-full flex justify-between items-center text-gray-300 text-sm">
       <IconRotation>
         <Plus className="stroke-gray-100" size={18} />
       </IconRotation>
@@ -51,10 +52,8 @@ export default function Main() {
 
     </div>
 
-    <div className="px-4 py-2 w-full flex justify-between items-center text-gray-100">
-      <IconRotation>
-        <X className="stroke-gray-100" size={18} />
-      </IconRotation>
+    <div className="px-4 py-2 w-full flex justify-between items-center text-gray-300 text-sm">
+      <DateAnimation />
     </div>
   </div>
 }
