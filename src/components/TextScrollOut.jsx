@@ -26,7 +26,7 @@ export default function TextScrollOut() {
         className="absolute text-xs text-gray-500 text-right pr-2 w-full bg-gray-950"
         style={{ right: easedRight || 0 }}
       >
-        A human, buggy, but constantly updating
+        A human, buggy, but constantly updating 🤙
       </motion.div>
       <div className="bg-gray-500 w-full h-[1px]"></div>
   </motion.div>
