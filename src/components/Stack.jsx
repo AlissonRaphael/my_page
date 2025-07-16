@@ -1,5 +1,3 @@
-import { DynamicIcon } from "lucide-react/dynamic"
-import { motion } from "framer-motion"
 import {
   SiJavascript,
   SiJavascriptHex,
@@ -70,586 +68,286 @@ import {
   SiPrettierHex,
 } from "@icons-pack/react-simple-icons"
 
-import TitleLeft from "./TitleLeft"
+import Card from "./Card"
 
 export default function Stack() {
-  return <div className="mt-12 w-full flex flex-col items-center relative">
-    <div className="p-8 w-full max-w-6xl flex flex-col">
-      <TitleLeft
-        title="welcome"
-        description="Here you'll find my projects, experiences, and a glimpse into my journey in the world of technology."
-        subtitle="/main"
-      />
-
-      <div className="mt-4 py-3 text-xs border-l-1 border-gray-700 relative">
-
-        <motion.div
-          className="absolute bottom-0 flex -left-[1px] w-[3px] bg-gray-950"
-          initial={{ height: "100%" }}
-          whileInView={{ height: 0 }}
-          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-          viewport={{ once: true }}
-        ></motion.div>
-
-        <motion.div
-          className="flex items-start"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
-          viewport={{ once: true }}
-        >
-          <div className="w-2/5 flex items-center">
-            <div className="pr-3 h-[24px] flex items-center justify-center relative">
-              <DynamicIcon name="binary" className="py-1 absolute top-0 -left-[12px] bg-gray-950 stroke-gray-400" size={24} />
-            </div>
-            <div className="text-gray-400">
-              Language
-            </div>
-          </div>
-
-          <motion.div
-            className="mt-1 w-3/5 flex flex-col justify-start"
-            initial="hidden"
-            whileInView="visible"
-            variants={techAnimationList}
-            custom={1}
-            viewport={{ once: true }}
-          >
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiJavascript size={14} color={SiJavascriptHex} className="mr-1" />
-              <div className="text-gray-300">
-                Javascript
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiTypescript size={14} color={SiTypescriptHex} className="mr-1" />
-              <div className="text-gray-300">
-                Typescript
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiElixir size={14} color={SiElixirHex} className="mr-1" />
-              <div className="text-gray-300">
-                Elixir
-              </div>
-            </motion.div>
-
-          </motion.div>
-
-        </motion.div>
-
-        <motion.div
-          className="mt-4 flex items-start"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
-          viewport={{ once: true }}
-        >
-          <div className="w-2/5 flex items-center">
-            <div className="pr-3 h-[23px] flex items-center justify-center relative">
-              <DynamicIcon name="server" className="py-1 absolute top-0 -left-[12px] bg-gray-950 stroke-gray-400" size={23} />
-            </div>
-            <div className="text-gray-400">
-              Backend
-            </div>
-          </div>
-
-          <motion.div
-            className="mt-1 w-3/5 flex flex-col justify-start"
-            initial="hidden"
-            whileInView="visible"
-            variants={techAnimationList}
-            custom={2}
-            viewport={{ once: true }}
-          >
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiNodedotjs size={14} color={SiNodedotjsHex} className="mr-1" />
-              <div className="text-gray-300">
-                Node.js
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiExpress size={14} color="#d9d9d9" className="mr-1" />
-              <div className="text-gray-300">
-                Express
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiNestjs size={14} color={SiNestjsHex} className="mr-1" />
-              <div className="text-gray-300">
-                NestJS
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiPostgresql size={14} color={SiPostgresqlHex} className="mr-1" />
-              <div className="text-gray-300">
-                PostgreSQL
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiSequelize size={14} color={SiSequelizeHex} className="mr-1" />
-              <div className="text-gray-300">
-                Sequelize
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiPrisma size={14} color="#e7e7e7" className="mr-1" />
-              <div className="text-gray-300">
-                Prisma
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiElasticsearch size={14} color={SiElasticsearchHex} className="mr-1" />
-              <div className="text-gray-300">
-                Elasticsearch
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiLogstash size={14} color={SiLogstashHex} className="mr-1" />
-              <div className="text-gray-300">
-                Logstash
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiRedis size={14} color={SiRedisHex} className="mr-1" />
-              <div className="text-gray-300">
-                Redis
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiJest size={14} color={SiJestHex} className="mr-1" />
-              <div className="text-gray-300">
-                Jest
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiDocker size={14} color={SiDockerHex} className="mr-1" />
-              <div className="text-gray-300">
-                Docker
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiHandlebarsdotjs size={14} color="#ff7700" className="mr-1" />
-              <div className="text-gray-300">
-                Handlebars.js
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiNunjucks size={14} color={SiNunjucksHex} className="mr-1" />
-              <div className="text-gray-300">
-                Nunjucks
-              </div>
-            </motion.div>
-
-          </motion.div>
-
-        </motion.div>
-
-        <motion.div
-          className="mt-4 flex items-start"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 4, duration: 1, ease: "easeInOut" }}
-          viewport={{ once: true }}
-        >
-          <div className="w-2/5 flex items-center">
-            <div className="pr-3 h-[24px] flex items-center justify-center relative">
-              <DynamicIcon name="code-xml" className="py-1 absolute top-0 -left-[12px] bg-gray-950 stroke-gray-400" size={24} />
-            </div>
-            <div className="text-gray-400">
-              Frontend
-            </div>
-          </div>
-
-          <motion.div
-            className="mt-1 w-3/5 flex flex-col justify-start"
-            initial="hidden"
-            whileInView="visible"
-            variants={techAnimationList}
-            custom={4}
-            viewport={{ once: true }}
-          >
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiHtml5 size={14} color={SiHtml5Hex} className="mr-1" />
-              <div className="text-gray-300">
-                HTML5
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiCss size={14} color={SiCssHex} className="mr-1" />
-              <div className="text-gray-300">
-                CSS
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiReact size={14} color={SiReactHex} className="mr-1" />
-              <div className="text-gray-300">
-                React
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiNextdotjs size={14} color="#e7e7e7" className="mr-1" />
-              <div className="text-gray-300">
-                Next.js
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiVite size={14} color={SiViteHex} className="mr-1" />
-              <div className="text-gray-300">
-                Vite
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiWebpack size={14} color={SiWebpackHex} className="mr-1" />
-              <div className="text-gray-300">
-                Webpack
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiTailwindcss size={14} color={SiTailwindcssHex} className="mr-1" />
-              <div className="text-gray-300">
-                Tailwindcss
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiBootstrap size={14} color={SiBootstrapHex} className="mr-1" />
-              <div className="text-gray-300">
-                Bootstrap
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiSass size={14} color={SiSassHex} className="mr-1" />
-              <div className="text-gray-300">
-                Sass
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiStyledcomponents size={14} color={SiStyledcomponentsHex} className="mr-1" />
-              <div className="text-gray-300">
-                StyledComponents
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiStorybook size={14} color={SiStorybookHex} className="mr-1" />
-              <div className="text-gray-300">
-                Storybook
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiRadixui size={14} color="#e7e7e7" className="mr-1" />
-              <div className="text-gray-300">
-                RadixUI
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiChakraui size={14} color={SiChakrauiHex} className="mr-1" />
-              <div className="text-gray-300">
-                ChakraUI
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiShadcnui size={14} color="#e7e7e7" className="mr-1" />
-              <div className="text-gray-300">
-                ShadcnUI
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiReact size={14} color={SiReactHex} className="mr-1" />
-              <div className="text-gray-300">
-                React Native
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiExpo size={14} color="#999999" className="mr-1" />
-              <div className="text-gray-300">
-                Expo
-              </div>
-            </motion.div>
-
-          </motion.div>
-
-        </motion.div>
-
-        <motion.div
-          className="mt-4 flex items-start"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 7, duration: 1, ease: "easeInOut" }}
-          viewport={{ once: true }}
-        >
-          <div className="w-2/5 flex items-center">
-            <div className="pr-3 h-[24px] flex items-center justify-center relative">
-              <DynamicIcon name="package" className="py-1 absolute top-0 -left-[12px] bg-gray-950 stroke-gray-400" size={24} />
-            </div>
-            <div className="text-gray-400">
-              Others
-            </div>
-          </div>
-
-          <motion.div
-            className="mt-1 w-3/5 flex flex-col justify-start"
-            initial="hidden"
-            whileInView="visible"
-            variants={techAnimationList}
-            custom={7}
-            viewport={{ once: true }}
-          >
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiGit size={14} color={SiGitHex} className="mr-1" />
-              <div className="text-gray-300">
-                Git
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiEslint size={14} color={SiEslintHex} className="mr-1" />
-              <div className="text-gray-300">
-                Eslint
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiPrettier size={14} color={SiPrettierHex} className="mr-1" />
-              <div className="text-gray-300">
-                Prettier
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiAxios size={14} color={SiAxiosHex} className="mr-1" />
-              <div className="text-gray-300">
-                Axios
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiTurborepo size={14} color={SiTurborepoHex} className="mr-1" />
-              <div className="text-gray-300">
-                Turborepo
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mb-1 flex items-center"
-              variants={techAnimationItem}
-              transition={transition}
-            >
-              <SiZod size={14} color={SiZodHex} className="mr-1" />
-              <div className="text-gray-300">
-                Zod
-              </div>
-            </motion.div>
-
-          </motion.div>
-
-        </motion.div>
-
+  return <div className="my-24 w-full">
+    <div className="m-auto w-50">
+      <div className="text-left text-6xl uppercase">
+        <span className="italic">Dev</span> Tech <span className="italic font-bold">St4ck</span>
       </div>
+      <div className="text-[0.6rem] text-right text-gray-400">
+        Frontend ● Backend ● Orther
+      </div>
+    </div>
 
+    <div className="mt-18 w-full h-full grid grid-cols-6 grid-rows-11 pl-10 pr-4">
+      {STACK.map(({ Icon, color, divider }, index) => {
+        if (divider) {
+          return <div className="m-1 w-[55px] h-[55px] flex items-center justify-center rounded-full bg-black" key={index}>
+          </div>
+        }
+        return <div className="m-1 w-[58px] h-[58px] flex items-center justify-center rounded-full" key={index} style={{ backgroundColor: color }}>
+          <Icon size={26} color={color} className="p-1 brightness-90 w-auto h-auto" />
+        </div>
+      })}
     </div>
   </div>
 }
 
-const techAnimationList = {
-  hidden: { opacity: 0 },
-  visible: custom => ({
-    opacity: 1,
-    transition: {
-      delayChildren: custom,
-      when: "beforeChildren",
-      staggerChildren: 0.3,
-    },
-  }),
-}
-
-const techAnimationItem = {
-  hidden: { opacity: 0, x: 20 },
-  visible: { opacity: 1, x: 0 },
-}
-
-const transition = {
-  type: "tween",
-  duration: 0.8,
-  ease: "easeInOut",
-}
+const STACK = [{
+    title: "Javascript",
+    description: "Language",
+    Icon: SiJavascript,
+    color: SiJavascriptHex,
+    footer: "2019",
+  }, {
+    divider: true,
+  }, {
+    title: "Typescript",
+    description: "Language",
+    Icon: SiTypescript,
+    color: SiTypescriptHex,
+    footer: "2021",
+  }, {
+    title: "Elixir",
+    description: "Language",
+    Icon: SiElixir,
+    color: SiElixirHex,
+    footer: "2022",
+  }, {
+    title: "Node.js",
+    description: "Backend",
+    Icon: SiNodedotjs,
+    color: SiNodedotjsHex,
+    footer: "2020",
+  }, {
+    title: "PostgreSQL",
+    description: "Backend",
+    Icon: SiPostgresql,
+    color: SiPostgresqlHex,
+    footer: "2020",
+  }, {
+    divider: true,
+  }, {
+    title: "Express",
+    description: "Backend",
+    Icon: SiExpress,
+    color: "#d9d9d9",
+    footer: "2020",
+  }, {
+    title: "NestJS",
+    description: "Backend",
+    Icon: SiNestjs,
+    color: SiNestjsHex,
+    footer: "2021",
+  }, {
+    title: "Sequelize",
+    description: "Backend",
+    Icon: SiSequelize,
+    color: SiSequelizeHex,
+    footer: "2020",
+  }, {
+    divider: true,
+  }, {
+    divider: true,
+  }, {
+    title: "Prisma",
+    description: "Backend",
+    Icon: SiPrisma,
+    color: "#e7e7e7",
+    footer: "2023",
+  }, {
+    title: "Elasticsearch",
+    description: "Backend",
+    Icon: SiElasticsearch,
+    color: SiElasticsearchHex,
+    footer: "2021",
+  }, {
+    title: "Logstash",
+    description: "Backend",
+    Icon: SiLogstash,
+    color: SiLogstashHex,
+    footer: "2021",
+  }, {
+    title: "Redis",
+    description: "Backend",
+    Icon: SiRedis,
+    color: SiRedisHex,
+    footer: "2020",
+  }, {
+    title: "Jest",
+    description: "Backend",
+    Icon: SiJest,
+    color: SiJestHex,
+    footer: "2020",
+  }, {
+    title: "Docker",
+    description: "Backend",
+    Icon: SiDocker,
+    color: SiDockerHex,
+    footer: "2020",
+  }, {
+    divider: true,
+  }, {
+    title: "Handlebars.js",
+    description: "Backend",
+    Icon: SiHandlebarsdotjs,
+    color: "#ff7700",
+    footer: "2021",
+  }, {
+    title: "Nunjucks",
+    description: "Backend",
+    Icon: SiNunjucks,
+    color: SiNunjucksHex,
+    footer: "2019",
+  }, {
+    title: "HTML5",
+    description: "Frontend",
+    Icon: SiHtml5,
+    color: SiHtml5Hex,
+    footer: "2019",
+  }, {
+    title: "CSS",
+    description: "Frontend",
+    Icon: SiCss,
+    color: SiCssHex,
+    footer: "2019",
+  }, {
+    divider: true,
+  }, {
+    divider: true,
+  }, {
+    title: "React",
+    description: "Frontend",
+    Icon: SiReact,
+    color: SiReactHex,
+    footer: "2020",
+  }, {
+    title: "Next.js",
+    description: "Frontend",
+    Icon: SiNextdotjs,
+    color: "#e7e7e7",
+    footer: "2023",
+  }, {
+    divider: true,
+  }, {
+    divider: true,
+  }, {
+    divider: true,
+  }, {
+    title: "Vite",
+    description: "Frontend",
+    Icon: SiVite,
+    color: SiViteHex,
+    footer: "2024",
+  }, {
+    title: "Webpack",
+    description: "Frontend",
+    Icon: SiWebpack,
+    color: SiWebpackHex,
+    footer: "2020",
+  }, {
+    title: "Tailwindcss",
+    description: "Frontend",
+    Icon: SiTailwindcss,
+    color: SiTailwindcssHex,
+    footer: "2024",
+  }, {
+    title: "Bootstrap",
+    description: "Frontend",
+    Icon: SiBootstrap,
+    color: SiBootstrapHex,
+    footer: "2022",
+  }, {
+    title: "Sass",
+    description: "Frontend",
+    Icon: SiSass,
+    color: SiSassHex,
+    footer: "2021",
+  }, {
+    title: "StyledComp...",
+    description: "Frontend",
+    Icon: SiStyledcomponents,
+    color: SiStyledcomponentsHex,
+    footer: "2020",
+  }, {
+    title: "Storybook",
+    description: "Frontend",
+    Icon: SiStorybook,
+    color: SiStorybookHex,
+    footer: "2022",
+  }, {
+    title: "RadixUI",
+    description: "Frontend",
+    Icon: SiRadixui,
+    color: "#e7e7e7",
+    footer: "2024",
+  }, {
+    divider: true,
+  }, {
+    title: "ChakraUI",
+    description: "Frontend",
+    Icon: SiChakraui,
+    color: SiChakrauiHex,
+    footer: "2024",
+  }, {
+    title: "ShadcnUI",
+    description: "Frontend",
+    Icon: SiShadcnui,
+    color: "#e7e7e7",
+    footer: "2024",
+  }, {
+    title: "React Native",
+    description: "Frontend",
+    Icon: SiReact,
+    color: SiReactHex,
+    footer: "2021",
+  }, {
+    divider: true,
+  }, {
+    divider: true,
+  }, {
+    title: "Expo",
+    description: "Frontend",
+    Icon: SiExpo,
+    color: "#999999",
+    footer: "2021",
+  }, {
+    title: "Git",
+    description: "Tools",
+    Icon: SiGit,
+    color: SiGitHex,
+    footer: "2020",
+  }, {
+    title: "Eslint",
+    description: "Tools",
+    Icon: SiEslint,
+    color: SiEslintHex,
+    footer: "2021",
+  }, {
+    title: "Prettier",
+    description: "Tools",
+    Icon: SiPrettier,
+    color: SiPrettierHex,
+    footer: "2021",
+  }, {
+    title: "Axios",
+    description: "Tools",
+    Icon: SiAxios,
+    color: SiAxiosHex,
+    footer: "2020",
+  }, {
+    title: "Turborepo",
+    description: "Tools",
+    Icon: SiTurborepo,
+    color: SiTurborepoHex,
+    footer: "2024",
+  }, {
+    title: "Zod",
+    description: "Tools",
+    Icon: SiZod,
+    color: SiZodHex,
+    footer: "2024",
+  },
+]
