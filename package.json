@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^12.7.0",
+    "@icons-pack/react-simple-icons": "^13.5.0",
     "lucide-react": "^0.503.0",
     "motion": "^12.9.2",
     "react": "^19.0.0",

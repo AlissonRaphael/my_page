@@ -450,10 +450,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@icons-pack/react-simple-icons@^12.7.0":
-  version "12.7.0"
-  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-12.7.0.tgz#d24e12d93829e6c34b76eb4ede19a67c0fb5a58c"
-  integrity sha512-XpG7e8buAco8AbvCar+4LX5do0L98d/NaeHoTuW4awyUH33id7HQiiMomK+cS1MRxfLNMmhW2W0223/fMC0unw==
+"@icons-pack/react-simple-icons@^13.5.0":
+  version "13.5.0"
+  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-13.5.0.tgz#a9ee5c774e500a011e08b525248f1fc074c186be"
+  integrity sha512-00/E53YOt967SomgPWyH4eTtHdUDLAeaowl0CAU7UnEuBOrHznrKhFQHccdN0wShR5CVXxYh41qeYl6ZGJ/OSg==
 
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.8"
