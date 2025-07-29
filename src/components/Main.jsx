@@ -9,7 +9,7 @@ import ImageZoom from './ImageZoom';
 import Foto from '../assets/foto.jpg'
 
 export default function Main() {
-  return <div className="w-full h-screen flex flex-col items-center justify-between relative">
+  return <div className="mb-24 w-full h-screen flex flex-col items-center justify-between relative">
     <TouchAnimation />
 
     <div className="p-4 w-full text-sm brightness-70">

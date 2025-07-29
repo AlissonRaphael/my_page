@@ -1,5 +1,5 @@
 export default function Bio() {
-  return <div className="w-full grid grid-cols-12 grid-row-12 text-[0.6rem] text-gray-500 text-center">
+  return <div className="my-24 w-full grid grid-cols-12 grid-row-12 text-[0.6rem] text-gray-500 text-center">
     <div className="col-span-3 row-span-1 relative flex items-end justify-center p-3 h-[20rem]">
       <div className="absolute inset-y-0 right-0 w-[1px] bg-gray-300"></div>
       <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gray-700"></div>
