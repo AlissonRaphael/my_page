@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import Bio from "./components/Bio";
 import Stack from "./components/Stack";
 import Repos from "./components/Repos";
+import Footer from "./components/Footer";
 
 export default function App() {
   return <>
@@ -11,5 +12,6 @@ export default function App() {
     <Bio />
     <Stack />
     <Repos />
+    <Footer />
   </>
 }
