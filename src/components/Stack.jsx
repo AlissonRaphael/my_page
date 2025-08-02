@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import {
   SiJavascript,
   SiJavascriptHex,
@@ -89,31 +90,38 @@ import {
 } from "@icons-pack/react-simple-icons"
 
 export default function Stack() {
-  return <div className="my-24 w-full flex flex-col items-center">
+  return <div className="mt-60 w-full flex flex-col items-center">
     <div className="m-auto w-50">
       <div className="text-left text-6xl uppercase">
         <span className="italic">Dev</span> Tech <span className="italic font-bold">St4ck</span>
       </div>
       <div className="text-[0.6rem] text-right text-neutral-400">
-        Frontend ● Backend ● Orther
+        Frontend ● Backend ● Tools
       </div>
     </div>
 
     <div className="mt-18 w-fit h-full grid grid-cols-6 grid-rows-11 pl-10 pr-4">
-      {STACK.map(({ Icon, color, divider }, index) => {
+      {STACKS.map(({ Icon, color, divider }, index) => {
         if (divider) {
           return <div className="m-0 mt-1 ml-1 w-[55px] h-[55px] flex items-center justify-center rounded-full bg-black" key={index}>
           </div>
         }
-        return <div className="m-0 mt-1 ml-1 w-[58px] h-[58px] flex items-center justify-center rounded-full" key={index} style={{ backgroundColor: color }}>
+        
+        color = color || "#fff";
+
+        return <motion.div
+          key={index}
+          className="m-0 mt-1 ml-1 w-[58px] h-[58px] flex items-center justify-center rounded-full"
+          animate={{ backgroundColor: color }}
+        >
           <Icon size={26} color={color} className="p-1 brightness-85 w-auto h-auto" />
-        </div>
+        </motion.div>
       })}
     </div>
   </div>
 }
 
-const STACK = [{
+const STACKS = [{
     title: "Javascript",
     Icon: SiJavascript,
     color: SiJavascriptHex,
