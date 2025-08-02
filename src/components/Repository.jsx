@@ -5,7 +5,7 @@ export default function Repository({ title = '', license, description, language,
     return null
   }
 
-  return <div className="m-4 p-4 h-full w-100 border-1 border-neutral-600">
+  return <div className="mt-6 p-4 h-full w-full border-1 border-neutral-600">
     <div className="mt-3 text-2xl leading-6 w-70">
       {title.replace(/_/g, ' ')}
     </div>
@@ -88,7 +88,7 @@ export default function Repository({ title = '', license, description, language,
         href={url}
         className="cursor-pointer w-full p-3 border-1 border-neutral-600 text-neutral-500 flex justify-center items-center hover:bg-neutral-800 hover:text-neutral-300 transition-colors"
       >
-        See More
+        more details
       </a>
     </div>
   </div>
