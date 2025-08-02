@@ -17,7 +17,7 @@ export default function Touch() {
     return null
   }
 
-  return <div className="absolute inset-y-0 right-0 pr-8 flex">
+  return <div className="absolute inset-x-0 top-0 w-100 flex justify-center">
     <motion.div
       className="flex items-center"
       initial={{ opacity: 0 }}

@@ -10,7 +10,7 @@ import Foto from '../assets/foto.jpg'
 
 export default function Main() {
   return <div className="mb-24 w-full h-screen flex flex-col items-center justify-between relative">
-    <TouchAnimation />
+    
 
     <div className="p-4 w-full text-sm brightness-70">
       <Datetime />
@@ -40,8 +40,8 @@ export default function Main() {
       </div>
     </div>
 
-    <div className="p-4 w-full text-sm brightness-70 text-center">
-      A human, buggy, but constantly updating 🤙
+    <div className="h-25 w-full text-sm brightness-70 text-center relative">
+      <TouchAnimation />
     </div>
   </div>
 }
