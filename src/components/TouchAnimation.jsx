@@ -29,10 +29,10 @@ export default function Touch() {
         animate={{ rotate: [-45, -50, -50, -5], translateY: [0, 2, 2, -20] }}
         transition={transition}
       >
-        <Pointer className="stroke-gray-300" size={22} />
+        <Pointer className="stroke-neutral-300" size={22} />
       </motion.div>
       <motion.div
-        className="pl-1 text-xs text-gray-300"
+        className="pl-1 text-xs text-neutral-300"
         animate={{ translateY: [0, 2, 2, -20], }}
         transition={transition}
       >

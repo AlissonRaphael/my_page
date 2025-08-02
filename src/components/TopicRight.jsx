@@ -8,7 +8,7 @@ export default function TopicRight({ icon, label, path }) {
     <div className="mt-8 flex items-center justify-end">
 
       <motion.div
-        className="h-[1px] bg-gray-500 w-100 mr-2"
+        className="h-[1px] bg-neutral-500 w-100 mr-2"
         initial={{ width: 0 }}
         whileInView={{ width: "100%" }}
         transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
@@ -36,12 +36,12 @@ export default function TopicRight({ icon, label, path }) {
           transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <DynamicIcon name={icon} size={16} className="stroke-gray-950" />
+          <DynamicIcon name={icon} size={16} className="stroke-neutral-950" />
         </motion.div>
       </motion.div>
 
       <motion.h1
-        className="text-gray-100 text-2xl poppins-bold uppercase"
+        className="text-neutral-100 text-2xl poppins-bold uppercase"
         initial={{ opacity: 0, x: 10 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.8, duration: 0.5, ease: "easeInOut" }}
@@ -53,7 +53,7 @@ export default function TopicRight({ icon, label, path }) {
     </div>
 
     <Typewriter
-      className="text-xs text-gray-500 text-right"
+      className="text-xs text-neutral-500 text-right"
       initialDelay={0.8}
       text={path}
     />

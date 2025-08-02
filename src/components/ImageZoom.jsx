@@ -9,7 +9,7 @@ export default function ImageZoom({ src, alt }) {
     offset: ["start start", "end start"]
   })
 
-  const scale = useTransform(scrollYProgress, [0,1], [1, 4])
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 4])
   useMotionValueEvent(scrollYProgress, "change", (latest) => console.log(latest))
   const easedScale = useSpring(scale, { stiffness: 100, damping: 20 });
 
@@ -17,7 +17,7 @@ export default function ImageZoom({ src, alt }) {
     <motion.img
       src={src}
       alt={alt}
-      className="object-cover origin-center border-1  border-gray-800"
+      className="object-cover origin-center border-1  border-neutral-800"
       style={{ scale: easedScale }}
       initial={{ scale: 1.5, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

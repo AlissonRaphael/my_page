@@ -94,7 +94,7 @@ export default function Stack() {
       <div className="text-left text-6xl uppercase">
         <span className="italic">Dev</span> Tech <span className="italic font-bold">St4ck</span>
       </div>
-      <div className="text-[0.6rem] text-right text-gray-400">
+      <div className="text-[0.6rem] text-right text-neutral-400">
         Frontend ● Backend ● Orther
       </div>
     </div>

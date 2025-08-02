@@ -3,9 +3,9 @@ import { SiGithub, SiMedium, SiGmail } from "@icons-pack/react-simple-icons";
 import Social from "./Social";
 
 export default function Footer() {
-  return <div className="my-24 w-full flex flex-col items-center">
-    <div className="w-100 flex justify-end">
-      <div className="text-right text-[0.7rem] text-gray-300 w-95">
+  return <div className="my-24 pt-4 w-full flex flex-col items-center bg-black border-t-1 border-neutral-900">
+    <div className="p-2 w-100 flex justify-end">
+      <div className="text-right text-[0.60rem] text-neutral-300 w-80">
         You can find me and see more details about my work on several platforms.
         On LinkedIn, I share professional updates, connections, and experiences.
         On Medium, I write articles and tutorials about development and learnings

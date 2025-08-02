@@ -16,23 +16,23 @@ export default function Repos() {
 
   return <div className="my-24 w-full flex flex-col items-center">
     <div className="w-full mr-10 flex flex-row justify-end">
-      <div className="pr-4 pt-32 border-r-1 border-gray-500">
+      <div className="pr-4 pt-32 border-r-1 border-neutral-500">
         <div className="m-auto" style={{ writingMode: 'sideways-lr' }}>
           <div className="text-left text-7xl font-bold uppercase italic">
             R3pos
           </div>
           <div className="w-full grid grid-cols-4 grid-rows-1 gap-1 items-end">
             <div className="bg-white h-full w-[7px] relative">
-              <div className="absolute -right-3 text-gray-500 text-[6px]">0%</div>
+              <div className="absolute -right-3 text-neutral-500 text-[6px]">0%</div>
             </div>
-            <div className="bg-gray-500 h-full w-[1px] relative">
-              <div className="absolute -right-3 text-gray-500 text-[6px]">0%</div>
+            <div className="bg-neutral-500 h-full w-[1px] relative">
+              <div className="absolute -right-3 text-neutral-500 text-[6px]">0%</div>
             </div>
-            <div className="bg-gray-300 h-full w-[4px] relative">
-              <div className="absolute -right-3 text-gray-500 text-[6px]">0%</div>
+            <div className="bg-neutral-300 h-full w-[4px] relative">
+              <div className="absolute -right-3 text-neutral-500 text-[6px]">0%</div>
             </div>
-            <div className="bg-gray-400 h-full w-[2px] relative">
-              <div className="absolute -right-3 text-gray-500 text-[6px]">0%</div>
+            <div className="bg-neutral-400 h-full w-[2px] relative">
+              <div className="absolute -right-3 text-neutral-500 text-[6px]">0%</div>
             </div>
           </div>
         </div>
