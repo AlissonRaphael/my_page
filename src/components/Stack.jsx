@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import {
   SiJavascript,
   SiJavascriptHex,
@@ -89,36 +90,119 @@ import {
   SiNginxHex,
 } from "@icons-pack/react-simple-icons"
 
+import Typewriter from "./Typewriter";
+
+const parent = {
+  hidden: { opacity: 0, y: -10 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+      duration: 1,
+    },
+  },
+}
+
+const children = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    }
+  },
+}
+
 export default function Stack() {
+    const scrollListener = useRef(null)
+    const [scrolling, setScrolling] = useState(false)
+
+    const stackContainerRef = useRef(null)
+    const isView = useInView(stackContainerRef)
+  
+    useEffect(() => {
+      let scrollTimeout;
+
+      const getStart = () => {
+        if (!scrollListener.current) {
+          scrollListener.current = true
+          setScrolling(true)
+        }
+      }
+
+      const getEnd = () => {
+        if (scrollListener.current) {
+          clearTimeout(scrollTimeout)
+          scrollTimeout = setTimeout(() => {
+            scrollListener.current = false
+            setScrolling(false)
+          }, 500)
+        }
+      }
+
+      window.addEventListener("scroll", getStart)
+      window.addEventListener("scroll", getEnd)
+
+  
+      return () => {
+        window.removeEventListener("scroll", getStart)
+        window.removeEventListener("scroll", getEnd)
+      }
+    }, [])
+
   return <div className="mt-60 w-full flex flex-col items-center">
     <div className="m-auto w-50">
-      <div className="text-left text-6xl uppercase">
-        <span className="italic">Dev</span> Tech <span className="italic font-bold">St4ck</span>
-      </div>
-      <div className="text-[0.6rem] text-right text-neutral-400">
-        Frontend ● Backend ● Tools
-      </div>
+      <motion.div
+        className="text-left text-6xl uppercase flex flex-col"
+        variants={parent}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true }}
+      >
+        <motion.span variants={children} className="italic">Dev</motion.span>
+        <motion.span variants={children}>Tech</motion.span>
+        <motion.span variants={children} className="italic font-bold">St4ck</motion.span>
+      </motion.div>
+      <Typewriter
+        className="text-[0.6rem] text-right text-neutral-400"
+        text="Frontend ● Backend ● Tools"
+      />
     </div>
 
-    <div className="mt-18 w-fit h-full grid grid-cols-6 grid-rows-11 pl-10 pr-4">
-      {STACKS.map(({ Icon, color, divider }, index) => {
-        if (divider) {
-          return <div className="m-0 mt-1 ml-1 w-[55px] h-[55px] flex items-center justify-center rounded-full bg-black" key={index}>
-          </div>
-        }
-        
-        color = color || "#fff";
-
-        return <motion.div
-          key={index}
-          className="m-0 mt-1 ml-1 w-[58px] h-[58px] flex items-center justify-center rounded-full"
-          animate={{ backgroundColor: color }}
-        >
-          <Icon size={26} color={color} className="p-1 brightness-85 w-auto h-auto" />
-        </motion.div>
-      })}
+    <div
+      ref={stackContainerRef}
+      className="mt-18 w-fit h-full grid grid-cols-6 grid-rows-11 pl-10 pr-4"
+    >
+      {STACKS.map(({ title, Icon, color, divider }, index) => <Item
+        key={title}
+        Icon={Icon}
+        color={color}
+        divider={divider}
+        isView={isView}
+        scrolling={scrolling}
+        time={Math.random() + 0.1}
+      />)}
     </div>
   </div>
+}
+
+function Item({ Icon, color, divider, isView, scrolling, time }) {
+  if (divider) {
+    return <div className="m-0 mt-1 ml-1 w-[55px] h-[55px] flex items-center justify-center rounded-full bg-black">
+    </div>
+  }
+
+  color = Math.random() >= 0.5 && isView && scrolling ? color : "#fff";
+
+  return <motion.div
+    className="m-0 mt-1 ml-1 w-[58px] h-[58px] flex items-center justify-center rounded-full"
+    animate={{ backgroundColor: color }}
+    transition={{ duration: time, ease: "easeInOut" }}
+  >
+    <Icon size={26} color={color} className="p-1 brightness-85 w-auto h-auto" />
+  </motion.div> 
 }
 
 const STACKS = [{
