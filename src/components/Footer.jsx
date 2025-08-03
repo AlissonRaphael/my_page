@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import { SiGithub, SiMedium, SiGmail } from "@icons-pack/react-simple-icons";
+import { Linkedin } from "lucide-react";
 
 import Social from "./Social";
-import { Linkedin } from "lucide-react";
 
 export default function Footer() {
   return <div className="mt-24 py-6 w-full flex flex-col items-center bg-black border-t-1 border-b-1 border-neutral-900">
@@ -34,13 +35,13 @@ const SOCIALS = [
     title: "Linkedin",
     url: "https://www.linkedin.com/in/alisson-raphael-oliveira/",
     icon: Linkedin,
-    description: "I share professional updates, connections, and experiences on Linkedin.",
+    description: "Connect with me on LinkedIn, where I share professional updates and experiences.",
   },
   {
     title: "Medium",
     url: "https://alissonraphaeloliveira.medium.com/",
     icon: SiMedium,
-    description: "I write articles and tutorials about development and learnings along my journey on Medium.",
+    description: "Articles and tutorials about development and learnings along my journey on Medium.",
   },
   {
     title: "Email",
