@@ -1,6 +1,6 @@
 import { GitFork, Star, User } from "lucide-react";
 
-export default function Repository({ title = '', license, description, language, visibility, owner, stars, watching, forks, url }) {
+export default function Repository({ title, license = "--", description, language = "--", visibility, owner, stars, watching, forks, url }) {
   if (!title) {
     return null
   }
