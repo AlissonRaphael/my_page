@@ -1,4 +1,4 @@
-import { motion, useInView } from "motion/react";
+import { motion, useInView, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import {
   SiJavascript,
@@ -116,43 +116,47 @@ const children = {
 }
 
 export default function Stack() {
-    const scrollListener = useRef(null)
-    const [scrolling, setScrolling] = useState(false)
+  const scrollListener = useRef(null)
+  const [scrolling, setScrolling] = useState(false)
 
-    const stackContainerRef = useRef(null)
-    const isView = useInView(stackContainerRef)
-  
-    useEffect(() => {
-      let scrollTimeout;
+  const stackContainerRef = useRef(null)
+  const isView = useInView(stackContainerRef)
 
-      const getStart = () => {
-        if (!scrollListener.current) {
-          scrollListener.current = true
-          setScrolling(true)
-        }
+  const containerRef = useRef(null)
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  })
+
+  scrollYProgress.on("change", () => {
+    let scrollTimeout;
+
+    const getStart = () => {
+      if (!scrollListener.current) {
+        scrollListener.current = true
+        setScrolling(true)
       }
+    }
 
-      const getEnd = () => {
-        if (scrollListener.current) {
-          clearTimeout(scrollTimeout)
-          scrollTimeout = setTimeout(() => {
-            scrollListener.current = false
-            setScrolling(false)
-          }, 500)
-        }
+    const getEnd = () => {
+      if (scrollListener.current) {
+        clearTimeout(scrollTimeout)
+        scrollTimeout = setTimeout(() => {
+          scrollListener.current = false
+          setScrolling(false)
+        }, 500)
       }
+    }
 
-      window.addEventListener("scroll", getStart)
-      window.addEventListener("scroll", getEnd)
+    getStart()
+    getEnd()
+  })
 
-  
-      return () => {
-        window.removeEventListener("scroll", getStart)
-        window.removeEventListener("scroll", getEnd)
-      }
-    }, [])
-
-  return <div className="mt-60 w-full flex flex-col items-center">
+  return <div
+    ref={containerRef}
+    className="mt-60 w-full flex flex-col items-center"
+  >
     <div className="m-auto w-50">
       <motion.div
         className="text-left text-6xl uppercase flex flex-col"
@@ -175,7 +179,7 @@ export default function Stack() {
       ref={stackContainerRef}
       className="mt-18 w-fit h-full grid grid-cols-6 grid-rows-11 pl-10 pr-4"
     >
-      {STACKS.map(({ title, Icon, color, divider }, index) => <Item
+      {STACKS.map(({ title, Icon, color, divider }) => <Item
         key={title}
         Icon={Icon}
         color={color}
@@ -407,14 +411,6 @@ const STACKS = [{
     color: SiNginxHex,
   }, {
     divider: true,
-  }, {
-    title: "Elastic Search",
-    Icon: SiElasticsearch,
-    color: SiElasticsearchHex,
-  }, {
-    title: "Logstash",
-    Icon: SiLogstash,
-    color: SiLogstashHex,
   }, {
     divider: true,
   }, {
