@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@icons-pack/react-simple-icons": "^13.5.0",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.503.0",
     "motion": "^12.9.2",
     "react": "^19.0.0",
