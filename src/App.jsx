@@ -1,17 +1,31 @@
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { useGSAP } from "@gsap/react";
+
 import "./styles/index.css";
 
-import Main from "./components/Main";
-import Bio from "./components/Bio";
-import Stack from "./components/Stack";
-import Repos from "./components/Repos";
-import Footer from "./components/Footer";
-
 export default function App() {
-  return <>
-    <Main />
-    <Bio />
-    <Stack />
-    <Repos />
-    <Footer />
-  </>
+  useGSAP(() => {
+    const activeSmoother = window.innerWidth >= 640
+
+    const smoother = ScrollSmoother.create({
+      smooth: activeSmoother ? 2 : 0,
+      effects: true,
+      normalizeScroll: true,
+    })
+
+    const handleLoad = () => ScrollTrigger.refresh()
+    window.addEventListener("load", handleLoad)
+
+    return () => {
+      window.removeEventListener("load", handleLoad)
+      smoother.kill()
+    }
+  }, [])
+
+
+  return <div id="smooth-wrapper">
+    <div id="smooth-content">
+    </div>
+  </div>
 }
