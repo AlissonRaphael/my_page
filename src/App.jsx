@@ -4,6 +4,8 @@ import { useGSAP } from "@gsap/react";
 
 import "./styles/index.css";
 
+import Main from "./components/Main";
+
 export default function App() {
   useGSAP(() => {
     const activeSmoother = window.innerWidth >= 640
@@ -26,6 +28,7 @@ export default function App() {
 
   return <div id="smooth-wrapper">
     <div id="smooth-content">
+      <Main />
     </div>
   </div>
 }
