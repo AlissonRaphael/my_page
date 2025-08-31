@@ -23,7 +23,7 @@ export default function Video() {
         pin: true,
         scrub: true,
         start: "top top",
-        end: "+=1000",
+        end: `+=${window.innerHeight}`,
       }
     })
 
@@ -53,7 +53,7 @@ export default function Video() {
     />
     <div
       id="shadow1"
-      className="shadows absolute z-20 inset-0 w-full h-full"
+      className="shadows absolute z-20 inset-0 w-svw h-svh"
       style={{
         background: "radial-gradient(circle at 50% -20%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 120%)",
         opacity: 1,
@@ -61,7 +61,7 @@ export default function Video() {
     ></div>
     <div
       id="shadow2"
-      className="shadows absolute z-20 inset-0 w-full h-full"
+      className="shadows absolute z-20 inset-0 w-svw h-svh"
       style={{
         background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)",
         opacity: 1,

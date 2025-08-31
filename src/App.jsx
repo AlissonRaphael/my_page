@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import "./styles/index.css";
 
 import Main from "./components/Main";
+import Presentation from "./components/Presentation";
 
 export default function App() {
   useGSAP(() => {
@@ -29,6 +30,7 @@ export default function App() {
   return <div id="smooth-wrapper">
     <div id="smooth-content">
       <Main />
+      <Presentation />
     </div>
   </div>
 }
