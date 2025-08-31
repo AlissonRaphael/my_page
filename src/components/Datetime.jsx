@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Datetime() {
   const date = new Date()
@@ -8,22 +9,33 @@ export default function Datetime() {
   const day = date.toLocaleString('en', { day: '2-digit' })
   const hour = date.toLocaleString('en', { hour: 'numeric', hour12: false })
 
-  return <motion.div className="w-full flex justify-between items-center">
-    <motion.div {...animationsProps()}>
-      {hour}h
-    </motion.div>
-    <motion.div {...animationsProps()}>
-      {day} {month.toLowerCase()}
-    </motion.div>
-    <motion.div {...animationsProps()}>
-      {year}
-    </motion.div>
-  </motion.div>
-}
+  useGSAP(() => {
+    return gsap.to('.datetime', {
+      keyframes: {
+        opacity: [0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1],
+      },
+      ease: "none",
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#datetime-wrapper",
+        scroller: "#smooth-wrapper",
+      },
+      stagger: {
+        amount: 0.2, 
+        from: "random",
+      }
+    })
+  }, [])
 
-const animationsProps = () => ({
-  initial: { opacity: 0 },
-  whileInView: { opacity: [0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1] },
-  transition: { duration: 1, ease: "anticipate" },
-  viewport: { once: true }
-})
+  return <div id="datetime-wrapper" className="absolute insert-x-0 bottom-1 md:bottom-4 z-10 w-full p-4 flex justify-around items-center text-white">
+    <div className="datetime" data-lag="1.5">
+      {hour}h
+    </div>
+    <div className="datetime" data-lag="0">
+      {day} {month.toLowerCase()}
+    </div>
+    <div className="datetime" data-lag="0.8">
+      {year}
+    </div>
+  </div>
+}

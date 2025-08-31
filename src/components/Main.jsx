@@ -1,3 +1,4 @@
+import Datetime from './Datetime';
 import Header from './Header';
 import ExploreAnimation from './ExploreAnimation';
 import Title from './Title';
@@ -9,5 +10,6 @@ export default function Main() {
     <ExploreAnimation />
     <Title />
     <Video />
+    <Datetime />
   </section>
 }
