@@ -1,16 +1,12 @@
-import React from 'react';
-import { ViteReactSSG } from 'vite-react-ssg/single-page'
+import { ViteReactSSG } from 'vite-react-ssg/single-page';
+
 import App from './App.jsx'
 
 const isDev = import.meta.env.DEV
 
 if (isDev) {
   import('react-dom/client').then(({ createRoot }) => {
-    createRoot(document.getElementById('root')).render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    )
+    createRoot(document.getElementById('root')).render(<App />)
   })
 }
 
