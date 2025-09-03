@@ -1,15 +1,19 @@
 import {
   SiJavascript,
   SiTypescript,
+  SiNodedotjs,
   SiExpress,
+  SiNestjs,
   SiPostgresql,
   SiSequelize,
   SiPrisma,
+  SiRedis,
   SiJest,
   SiDocker,
   SiReact,
   SiNextdotjs,
   SiVite,
+  SiTailwindcss,
   SiBootstrap,
   SiSass,
   SiStorybook,
@@ -17,6 +21,10 @@ import {
   SiHtml5,
   SiCss,
   SiRadixui,
+  SiShadcnui,
+  SiStyledcomponents,
+  SiZod,
+  SiHandlebarsdotjs,
 } from "@icons-pack/react-simple-icons";
 
 export default function Techs() {
@@ -26,6 +34,9 @@ export default function Techs() {
     </div>
     <div className="flex gap-8 pt-4">
       {MIDDLE.map(tech => <Tech key={tech.title} {...tech} />)}
+    </div>
+    <div className="flex gap-8 pt-4">
+      {BOTTOM.map(tech => <Tech key={tech.title} {...tech} />)}
     </div>
   </div>
 }
@@ -93,4 +104,33 @@ const MIDDLE = [{
 }, {
   title: "Expo",
   Icon: SiExpo,
+}]
+
+const BOTTOM = [{
+  title: "Handlebars.js",
+  Icon: SiHandlebarsdotjs,
+}, {
+  title: "React",
+  Icon: SiReact,
+}, {
+  title: "Node.js",
+  Icon: SiNodedotjs,
+}, {
+  title: "NestJS",
+  Icon: SiNestjs,
+}, {
+  title: "Redis",
+  Icon: SiRedis,
+}, {
+  title: "Tailwindcss",
+  Icon: SiTailwindcss,
+}, {
+  title: "Styled Components",
+  Icon: SiStyledcomponents,
+}, {
+  title: "ShadcnUI",
+  Icon: SiShadcnui,
+}, {
+  title: "Zod",
+  Icon: SiZod,
 }]
