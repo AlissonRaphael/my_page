@@ -1,3 +1,5 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import {
   SiJavascript,
   SiTypescript,
@@ -28,14 +30,26 @@ import {
 } from "@icons-pack/react-simple-icons";
 
 export default function Techs() {
+  useGSAP(() => {
+    gsap.to("marquee-top", {
+      xPercent: -100,
+      repeat: -1,
+      ease: "none",
+      duration: 20,
+    }).totalProgress(0.5)
+
+    gsap.set("marquee-top", { xPercent: -50 })
+    
+  }, [])
+
   return <div className="w-full h-100 relative">
-    <div id="tech1" className="flex gap-8">
+    <div id="marquee-top" className="flex gap-8">
       {TOP.map(tech => <Tech key={tech.title} {...tech} />)}
     </div>
-    <div className="flex gap-8 pt-4">
+    <div id="marquee-middle" className="flex gap-8 pt-4">
       {MIDDLE.map(tech => <Tech key={tech.title} {...tech} />)}
     </div>
-    <div className="flex gap-8 pt-4">
+    <div id="marquee-bottom" className="flex gap-8 pt-4">
       {BOTTOM.map(tech => <Tech key={tech.title} {...tech} />)}
     </div>
   </div>
