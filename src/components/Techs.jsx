@@ -1,19 +1,31 @@
 import {
   SiJavascript,
+  SiTypescript,
+  SiExpress,
   SiPostgresql,
   SiSequelize,
+  SiPrisma,
   SiJest,
+  SiDocker,
   SiReact,
   SiNextdotjs,
+  SiVite,
   SiBootstrap,
+  SiSass,
   SiStorybook,
+  SiExpo,
   SiHtml5,
+  SiCss,
+  SiRadixui,
 } from "@icons-pack/react-simple-icons";
 
 export default function Techs() {
   return <div className="w-full h-100 relative">
     <div id="tech1" className="flex gap-8">
       {TOP.map(tech => <Tech key={tech.title} {...tech} />)}
+    </div>
+    <div className="flex gap-8 pt-4">
+      {MIDDLE.map(tech => <Tech key={tech.title} {...tech} />)}
     </div>
   </div>
 }
@@ -52,4 +64,33 @@ const TOP = [{
 }, {
   title: "React Native",
   Icon: SiReact,
+}]
+
+const MIDDLE = [{
+  title: "CSS",
+  Icon: SiCss,
+}, {
+  title: "Vite",
+  Icon: SiVite,
+}, {
+  title: "Sass",
+  Icon: SiSass,
+}, {
+  title: "Typescript",
+  Icon: SiTypescript,
+}, {
+  title: "Express",
+  Icon: SiExpress,
+}, {
+  title: "Prisma",
+  Icon: SiPrisma,
+}, {
+  title: "Docker",
+  Icon: SiDocker,
+}, {
+  title: "RadixUI",
+  Icon: SiRadixui,
+}, {
+  title: "Expo",
+  Icon: SiExpo,
 }]
