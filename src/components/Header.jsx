@@ -37,19 +37,19 @@ export default function Header() {
       <span>a</span>
       <span>.</span>
     </div>
-    <ul className="mt-2 md:mt-4 w-full flex gap-1 sm:gap-2 lg:gap-4 items-center justify-between text-[0.7rem] leading-[0.6rem] md:text-xs md:leading-[0.75rem]">
-      <li className="pt-[0.25rem] md:pt-[0.5rem] w-full border-t-1 border-white hidden sm:block">
+    <ul className="mt-2 md:mt-4 self-end w-1/2 md:w-full flex flex-col md:flex-row gap-1 sm:gap-2 lg:gap-4 items-center justify-between text-xs leading-[0.75rem]">
+      <li className="py-2 w-full border-t-1 border-white hidden sm:block">
         <span>Published in 2025.</span>
       </li>
-      <li className="pt-[0.25rem] md:pt-[0.5rem] w-full border-t-1 border-white uppercase flex items-center">
+      <li className="py-2 not-first:w-full border-t-1 border-white uppercase flex items-center" >
         <div className="h-full w-[4px] md:w-[6px] bg-white rounded-[1px] mr-[0.25rem] md:mr-[0.5rem]">.</div>
         <a href="/#start">start</a>
       </li>
-      <li className="pt-[0.25rem] md:pt-[0.5rem] w-full border-t-1 border-white uppercase flex items-center">
-        <div className="h-full w-[4px] md:w-[6px] bg-white rounded-[1px] mr-[0.25rem] md:mr-[0.5rem]">.</div>
+      <li className="py-2 w-full border-t-1 border-white uppercase flex items-center">
+        <div className="h-full w-[4px] md:w-[6px] bg-white rounded-[1px] mr-[0.25rem] md:mr-2">.</div>
         <a href="/#about">about</a>
       </li>
-      <li className="pt-[0.25rem] md:pt-[0.5rem] w-full border-t-1 border-white uppercase flex items-center">
+      <li className="py-2 w-full border-t-1 border-white uppercase flex items-center">
         <div className="h-full w-[4px] md:w-[6px] bg-white rounded-[1px] mr-[0.25rem] md:mr-[0.5rem]">.</div>
         <a href="/#repo">repos</a>
       </li>
