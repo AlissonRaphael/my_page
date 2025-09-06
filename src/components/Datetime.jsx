@@ -27,14 +27,14 @@ export default function Datetime() {
     })
   }, [])
 
-  return <div id="datetime-wrapper" className="absolute insert-x-0 bottom-1 md:bottom-4 z-10 w-full p-4 flex justify-around items-center text-white">
-    <div className="datetime" data-lag="1.5">
+  return <div id="datetime-wrapper" className="absolute insert-x-0 bottom-0 z-10 w-full p-4 flex justify-around items-center text-white text-xs md:text-base">
+    <div className="datetime">
       {hour}h
     </div>
-    <div className="datetime" data-lag="0">
+    <div className="datetime">
       {day} {month.toLowerCase()}
     </div>
-    <div className="datetime" data-lag="0.8">
+    <div className="datetime">
       {year}
     </div>
   </div>
