@@ -34,7 +34,7 @@ export default function Video() {
     }
 
     timeline.fromTo(".shadows", {
-      opacity: 0
+      opacity: 0.2
     }, {
       opacity: 1,
     }, 0)
@@ -56,7 +56,7 @@ export default function Video() {
       className="shadows absolute z-20 inset-0 w-svw h-svh"
       style={{
         background: "radial-gradient(circle at 50% -20%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 120%)",
-        opacity: 1,
+        opacity: 0.2,
       }}
     ></div>
     <div
@@ -64,7 +64,7 @@ export default function Video() {
       className="shadows absolute z-20 inset-0 w-svw h-svh"
       style={{
         background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)",
-        opacity: 1,
+        opacity: 0.2,
       }}
     ></div>
   </div>
