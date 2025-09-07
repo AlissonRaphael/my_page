@@ -44,8 +44,8 @@ export default function ExploreAnimation() {
       scrollTrigger: {
         trigger: "#scroll-status-box",
         scroller: "#smooth-wrapper",
-        start: isMobile ? "top center" : "top top",
-        end: isMobile ? "bottom top" : "bottom center",
+        start: "top 70%",
+        end: "bottom center",
         scrub: true,
       }
     })

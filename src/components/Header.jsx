@@ -38,7 +38,7 @@ export default function Header() {
       <span>.</span>
     </div>
     <ul className="mt-2 md:mt-4 self-end w-1/2 md:w-full flex flex-col md:flex-row gap-1 sm:gap-2 lg:gap-4 items-center justify-between text-xs leading-[0.75rem]">
-      <li className="py-2 w-full border-t-1 border-white hidden sm:block">
+      <li className="py-2 w-full border-t-1 border-white hidden md:block">
         <span>Published in 2025.</span>
       </li>
       <li className="py-2 not-first:w-full border-t-1 border-white uppercase flex items-center" >
