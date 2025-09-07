@@ -51,7 +51,7 @@ export default function ExploreAnimation() {
     })
   }, [])
 
-  return <div className="absolute z-10 insert-x-0 bottom-40 sm:inset-y-0 sm:left-20 flex justify-center">
+  return <div className="absolute z-10 inset-x-0 bottom-40 flex justify-center">
     <div id="scroll-status-box" className="flex items-center">
       <div id="scroll-status-icon" className="w-6 h-6">
         <DynamicIcon name={window.innerWidth < 960 ? 'pointer' : 'mouse'} className="stroke-white" size={22} />
