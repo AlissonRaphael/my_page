@@ -1,6 +1,6 @@
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
-import gsap from "gsap"
 
 export default function Presentation() {
   useGSAP(() => {
@@ -20,11 +20,23 @@ export default function Presentation() {
     })
   }, [])
 
-  return <section id="presentation" className="w-full h-svh flex items-center justify-center relative">
-    <div className="max-w-3xl px-6 md:px-8 lg:px-0 text-lg md:text-xl lg:text-3xl text-justify">
-      <p className="mb-4">I have degrees in Science and Technology as well as in Production Engineering, both from the Federal Rural University of the Semi-Arid Region in Brazil.</p>
-      <p className="mb-4">Passionate about technology, I've always been driven to find solutions that help companies enter the digital world. That journey eventually led me to dive deep into the world of programming.</p>
-      <p>From working independently to becoming a full-time team member, I've been building my career as a web developer for over five years, working with both backend and frontend technologies.</p>
+  return <section className="w-full h-svh relative">
+    <div id="presentation" className="w-full h-full flex items-center justify-center">
+      <div className="max-w-2xl px-4 md:px-8 lg:px-0 text-lg md:text-xl lg:text-xl text-justify">
+        <h1 className="font-[FreightBig] italic text-4xl">
+          Hello<span className="not-italic uppercase">and</span>welcome!</h1>
+        <p>On this page, you'l find a few details about my journey as a full-stack developer. Feel free to explore. If you ever need assistance or would like to get in touch, you'll find all the ways to reach me further down the page.</p>
+      </div>
     </div>
+    {/* <div className="absolute inset-0 z-30 w-full h-full p-6 hidden md:flex items-center justify-between text-2xl">
+      <div className="flex flex-col">
+        <span className="font-[HelveticaNow] text-7xl leading-[2.5rem]">00</span>
+        <span className="text-xs opacity-50">home</span>
+      </div>
+      <div className="flex flex-col">
+        <span className="font-[HelveticaNow] text-7xl leading-[2.5rem]">02</span>
+        <span className="text-xs opacity-50">repos</span>
+      </div>
+    </div> */}
   </section>
 }
