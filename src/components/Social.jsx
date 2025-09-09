@@ -1,57 +1,44 @@
-import { motion } from "framer-motion";
+import gsap from "gsap";
+import { useMemo } from "react";
+import { useGSAP } from "@gsap/react";
 
-import Typewriter from "./Typewriter";
+export default function Social({ id, title, url, Icon, description }) {
+  const key = useMemo(() => ({
+    container: `#${id}-social`,
+    border: `#${id}-social-border`,
+  }), [id])
 
-export default function Social({ title, url, Icon, description }) {
-  return <div className="px-4 w-full h-full">
-    <motion.div
-      className="w-full h-[1px] bg-neutral-700"
-      initial={{ width: 0 }}
-      whileInView={{ width: "100%" }}
-      transition={{ duration: 2, ease: "easeInOut" }}
-    ></motion.div>
+  useGSAP(() => {
+    gsap.from(key.border, {
+      width: "0%",
+      duration: 1,
+      scrollTrigger: {
+        trigger: key.container,
+        scroller: "#smooth-wrapper",
+        toggleActions: "play reverse play reverse",
+      }
+    })
+  }, [key.container, key.border])
 
-    <div className="px-4 py-6 w-full display flex items-center justify-between gap-5">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 2, ease: "easeInOut" }}
-      >
-        <Icon size={22} color="#fff" />
-      </motion.div>
-      <Typewriter
-        className="w-4/12 text-white text-2xl"
-        text={title}
-        initialDelay={0.6}
-        once={false}
-      />
+  return <div className="p-6 display flex items-start justify-between">
+    <div className="w-2/12 mt-2">
+      <Icon size={16} color="#fff" />
+    </div>
 
-      <div className="w-6/12 flex flex-col gap-2 text-neutral-400">
-        <motion.p
-          className="text-[0.60rem] text-justify hyphens-auto"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 2, ease: "easeInOut" }}
-        >
-          {description}
-        </motion.p>
-        <Link url={url} />
-      </div>
+    <div className="w-4/12 text-3xl leading-none flex flex-col">
+      <div className="font-[FreightBig] italic lowercase mb-1">{title}</div>
+      <div className="capitalize">{id}</div>
+    </div>
+
+    <div className="w-6/12 mt-1 flex flex-col gap-2 text-neutral-400">
+      <p className="text-sm text-justify hyphens-auto">
+        {description}
+      </p>
+      <a href={url} className="text-xs tracking-[0.15em] text-white" target="_blank">
+        <span className="border-b-1">
+          view
+        </span>
+      </a>
     </div>
   </div>
-}
-
-function Link({ url }) {
-  return <motion.a
-    href={url} className="text-xs text-right tracking-[0.15em]" target="_blank"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ delay: 1.2, duration: 2, ease: "easeInOut" }}
-  >
-    <span
-      className="border-b-1"
-    >
-      view
-    </span>
-  </motion.a>
 }
