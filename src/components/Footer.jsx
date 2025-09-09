@@ -1,12 +1,12 @@
 import { SiGithub, SiMedium, SiGmail } from "@icons-pack/react-simple-icons";
-import { ArrowUp, ArrowUpRight, Linkedin, SquareArrowUp } from "lucide-react";
+import { ArrowUpRight, Linkedin } from "lucide-react";
 
 import Social from "./Social";
 
 export default function Footer() {
-  return <footer id="footer" className="p-4 lg:p-14 w-full flex items-center justify-around gap-14 bg-black border-t-1 border-neutral-900">
-    <div className="w-7/12 max-w-3xl">
-      <div className="font-[FreightBig] text-4xl text-white uppercase">
+  return <footer id="footer" className="p-4 md:p-8 lg:p-14 w-full flex flex-col lg:flex-row items-center justify-around gap-8 lg:gap-18 xl:gap-24 2xl:gap-32 bg-black border-t-1 border-neutral-900">
+    <div className="w-full lg:w-1/2 lg:max-w-3xl">
+      <div className="font-[FreightBig] text-2xl md:text-4xl text-white uppercase">
         <span className="lowercase italic">you can </span>
         find me
         <span className="lowercase italic"> and see more </span>
@@ -14,7 +14,7 @@ export default function Footer() {
         <span className="lowercase italic"> my work on </span>
         several platforms.
       </div>
-      <p className="mt-2 text-neutral-400 text-base text-justify hyphens-auto">
+      <p className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm lg:text-base text-justify hyphens-auto">
         More details about personal projects, repositories, activities and code can be found directly on Github.
         Connect with me on LinkedIn, where I share professional updates and experiences.
         Articles and tutorials about development and learnings along my journey on Medium.
@@ -28,12 +28,12 @@ export default function Footer() {
         </a>
       </div>
 
-      <div className="mt-12 text-neutral-500 text-base">
-        © 2025 Your Name. All rights reserved. No part of this site may be reproduced without permission.
+      <div className="mt-12 text-neutral-500 text-base hidden lg:block">
+        © 2025 Alisson Oliveira. All rights reserved. No part of this site may be reproduced without permission.
       </div>
     </div>
 
-    <div className="w-5/12">
+    <div className="w-full lg:w-1/2 lg:max-w-3xl">
       {SOCIALS.map(({ id, title, url, icon, description }) => <Social
         id={id}
         key={id}
@@ -42,6 +42,10 @@ export default function Footer() {
         url={url}
         Icon={icon}
       />)}
+    </div>
+
+    <div className="lg:mt-12 text-neutral-500 text-xs sm:text-sm md:text-base block lg:hidden w-full text-left">
+      © 2025 Alisson Oliveira. All rights reserved. No part of this site may be reproduced without permission.
     </div>
   </footer>
 }
