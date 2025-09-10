@@ -20,12 +20,12 @@ export default function Social({ id, title, url, Icon, description }) {
     })
   }, [key.container, key.border])
 
-  return <div className="py-3 lg:py-6 display flex items-start justify-between">
+  return <div className="py-3 lg:py-4 display flex items-start justify-between">
     <div className="w-2/12 mt-2">
       <Icon size={16} color="#fff" />
     </div>
 
-    <div className="w-4/12 lg:w-5/12 xl:w-4/12 text-xl sm:text-2xl lg:text-3xl leading-none flex flex-col">
+    <div className="w-4/12 lg:w-5/12 xl:w-4/12 text-xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl leading-none flex flex-col">
       <div className="font-[FreightBig] italic lowercase mb-1">{title}</div>
       <div className="capitalize">{id}</div>
     </div>

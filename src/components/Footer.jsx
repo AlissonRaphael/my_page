@@ -6,7 +6,7 @@ import Social from "./Social";
 export default function Footer() {
   return <footer id="footer" className="p-4 md:p-8 lg:p-14 w-full flex flex-col lg:flex-row items-center justify-around gap-8 lg:gap-18 xl:gap-24 2xl:gap-32 bg-black border-t-1 border-neutral-900">
     <div className="w-full lg:w-1/2 lg:max-w-3xl">
-      <div className="font-[FreightBig] text-2xl md:text-4xl text-white uppercase">
+      <div className="font-[FreightBig] text-xl md:text-4xl text-white uppercase">
         <span className="lowercase italic">you can </span>
         find me
         <span className="lowercase italic"> and see more </span>
