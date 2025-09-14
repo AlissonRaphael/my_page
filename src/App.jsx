@@ -6,6 +6,7 @@ import "./styles/index.css";
 
 import Main from "./components/Main";
 import Presentation from "./components/Presentation";
+import Curriculum from "./components/Curriculum";
 
 export default function App() {
   useGSAP(() => {
@@ -31,6 +32,7 @@ export default function App() {
     <div id="smooth-content">
       <Main />
       <Presentation />
+      <Curriculum />
     </div>
   </div>
 }
