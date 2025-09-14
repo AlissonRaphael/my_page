@@ -4,7 +4,7 @@ import { SplitText } from "gsap/SplitText";
 
 export default function Presentation() {
   useGSAP(() => {
-    const text = new SplitText("#presentation", { type: "words,chars" })
+    const text = new SplitText("#presentation", { type: "words" })
 
     gsap.from(text.words, {
       opacity: 0.3,
