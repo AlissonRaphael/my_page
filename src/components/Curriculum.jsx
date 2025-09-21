@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { SiBootstrap, SiCreatereactapp, SiElasticsearch, SiExpress, SiNebula, SiNodedotjs, SiPostgresql, SiReact, SiReactquery, SiReactrouter, SiSequelize, SiTailwindcss } from "@icons-pack/react-simple-icons"
+import { SiBootstrap, SiCreatereactapp, SiElasticsearch, SiExpress, SiNebula, SiNodedotjs, SiPostgresql, SiReact, SiReactquery, SiReactrouter, SiSequelize, SiStorybook, SiStyledcomponents, SiTailwindcss } from "@icons-pack/react-simple-icons"
 
 import S3 from "../assets/icons/amazons3.svg"
 import BullMQ from "../assets/icons/bullmq.svg"
@@ -36,9 +36,8 @@ export default function Curriculum() {
         <SectionTwo />
       </section>
       <section className="w-screen h-svh relative">
-        <Ruler />
         <Ruler title="2021" />
-        &nbsp;
+        <SectionTree />
       </section>
       <section className="w-screen h-svh relative">
         <Ruler title="2020" />
@@ -126,6 +125,34 @@ function SectionTwo() {
           </li>
           <li>
             on the backend, worked directly with <span className="text-nowrap"><SiNodedotjs {...iconProps} /> Node.js</span>, <span className="text-nowrap"><SiExpress {...iconProps} />Express</span>, <span className="text-nowrap"><SiSequelize {...iconProps} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...iconProps} />PostgresSQL</span>, and <span className="text-nowrap"><SiElasticsearch {...iconProps} />Elasticsearch</span>, both implementing new features and maintaining the API.
+          </li>
+          <li>
+            and more...
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+}
+
+function SectionTree() {
+  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.1rem] inline-flex" }
+
+  return <div className="p-4 w-svw h-full flex justify-center">
+    <div className="w-full max-w-xl flex flex-col justify-center">
+      <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
+        associate<span className="not-italic uppercase"> at ifficient</span> 
+      </h2>
+      <div className="font-light text-sm md:text-base opacity-75">
+        <ul className="flex flex-col gap-2 text-justify break-normal">
+          <li>
+            handled ad-hoc requests for implementing new features and fixing bugs.
+          </li>
+          <li>
+            Migrated legacy React systems by refactoring class components into functional components with <span className="text-nowrap"><SiReact {...iconProps} />React Hooks</span>.
+          </li>
+          <li>
+            Helped implement a design system using <span className="text-nowrap"><SiStyledcomponents {...iconProps} />Styled Components</span> and <span className="text-nowrap"><SiStorybook {...iconProps} />Storybook</span>
           </li>
           <li>
             and more...
