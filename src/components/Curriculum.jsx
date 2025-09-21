@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { SiExpress, SiNebula, SiNodedotjs, SiReact, SiReactquery, SiReactrouter, SiTailwindcss } from "@icons-pack/react-simple-icons"
+import { SiBootstrap, SiCreatereactapp, SiElasticsearch, SiExpress, SiNebula, SiNodedotjs, SiPostgresql, SiReact, SiReactquery, SiReactrouter, SiSequelize, SiTailwindcss } from "@icons-pack/react-simple-icons"
 
 import S3 from "../assets/icons/amazons3.svg"
 import BullMQ from "../assets/icons/bullmq.svg"
@@ -33,7 +33,7 @@ export default function Curriculum() {
       </section>
       <section className="w-screen h-svh relative">
         <Ruler title="2021 - 2022" />
-        &nbsp;
+        <SectionTwo />
       </section>
       <section className="w-screen h-svh relative">
         <Ruler />
@@ -75,7 +75,7 @@ function Ruler({ title }) {
 }
 
 function SectionOne() {
-  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.1rem] mb-[0.25rem] inline-flex" }
+  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.15rem] inline-flex" }
 
   return <div className="p-4 w-svw h-full flex justify-center">
     <div className="w-full max-w-xl flex flex-col justify-center">
@@ -98,6 +98,34 @@ function SectionOne() {
           </li>
           <li>
             migrated the backend API to support partner integrations, improving the security layer and standardizing endpoints with <span className="text-nowrap"><SiExpress {...iconProps} />Express</span>.
+          </li>
+          <li>
+            and more...
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+}
+
+function SectionTwo() {
+  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.1rem] inline-flex" }
+
+  return <div className="p-4 w-svw h-full flex justify-center">
+    <div className="w-full max-w-xl flex flex-col justify-center">
+      <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
+        associate<span className="not-italic uppercase"> at ifficient</span> 
+      </h2>
+      <div className="font-light text-sm md:text-base opacity-75">
+        <ul className="flex flex-col gap-2 text-justify break-normal">
+          <li>
+            actively worked on projects focused on marketing and paid traffic, implementing new features, fixing bugs, and maintaining/refactoring legacy systems.
+          </li>
+          <li>
+            on the frontend, added new features, built new screens, and refactored legacy UI using <span className="text-nowrap"><SiReact {...iconProps} />React</span>, <span className="text-nowrap"><SiBootstrap {...iconProps} />Bootstrap</span>, <span className="text-nowrap"><SiReactrouter {...iconProps} />ReactRouter</span>, <span className="text-nowrap"><SiCreatereactapp {...iconProps} />React-Formsy</span>,<span className="text-nowrap"><SiReact {...iconProps} />React-DND</span>, etc.
+          </li>
+          <li>
+            on the backend, worked directly with <span className="text-nowrap"><SiNodedotjs {...iconProps} /> Node.js</span>, <span className="text-nowrap"><SiExpress {...iconProps} />Express</span>, <span className="text-nowrap"><SiSequelize {...iconProps} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...iconProps} />PostgresSQL</span>, and <span className="text-nowrap"><SiElasticsearch {...iconProps} />Elasticsearch</span>, both implementing new features and maintaining the API.
           </li>
           <li>
             and more...
