@@ -9,6 +9,7 @@ export default function ContentFade({ animationOptions = {}, scrollTriggerOption
   useGSAP(() => {
     gsap.from(ref.current, {
       opacity: 0,
+      x: -20,
       duration: 1.5,
       ease: "power3.out",
       ...animationOptions,
