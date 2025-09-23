@@ -41,7 +41,7 @@ export default function Curriculum() {
       </section>
       <section className="w-screen h-svh relative">
         <Ruler title="2020" />
-        &nbsp;
+        <SectionFour />
       </section>
     </div>
   </div>
@@ -96,19 +96,17 @@ function SectionOne() {
             implemented a high-volume data export pipeline with <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>, <span className="text-nowrap"><SiNodedotjs {...iconProps} /> Node-Streams</span>, and <span className="text-nowrap"><img src={S3} className="invert size-3 ml-[0.07rem] mr-[0.1rem] inline-flex" />AmazonS3</span>.
           </li>
           <li>
-            migrated the backend API to support partner integrations, improving the security layer and standardizing endpoints with <span className="text-nowrap"><SiExpress {...iconProps} />Express</span>.
-          </li>
-          <li>
-            and more...
+            migrated API to support partner integrations, improving the security layer and standardizing endpoints with <span className="text-nowrap"><SiExpress {...iconProps} />Express</span>.
           </li>
         </ul>
       </div>
+      <div className="flex justify-center tracking-[0.25rem] opacity-75">...</div>
     </div>
   </div>
 }
 
 function SectionTwo() {
-  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.1rem] inline-flex" }
+  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.15rem] inline-flex" }
 
   return <div className="p-4 w-svw h-full flex justify-center">
     <div className="w-full max-w-xl flex flex-col justify-center">
@@ -121,27 +119,25 @@ function SectionTwo() {
             actively worked on projects focused on marketing and paid traffic, implementing new features, fixing bugs, and maintaining/refactoring legacy systems.
           </li>
           <li>
-            on the frontend, added new features, built new screens, and refactored legacy UI using <span className="text-nowrap"><SiReact {...iconProps} />React</span>, <span className="text-nowrap"><SiBootstrap {...iconProps} />Bootstrap</span>, <span className="text-nowrap"><SiReactrouter {...iconProps} />ReactRouter</span>, <span className="text-nowrap"><SiCreatereactapp {...iconProps} />React-Formsy</span>,<span className="text-nowrap"><SiReact {...iconProps} />React-DND</span>, etc.
+            added new features, built new screens, and refactored legacy UI using <span className="text-nowrap"><SiReact {...iconProps} />React</span>, <span className="text-nowrap"><SiBootstrap {...iconProps} />Bootstrap</span>, <span className="text-nowrap"><SiReactrouter {...iconProps} />ReactRouter</span>, <span className="text-nowrap"><SiCreatereactapp {...iconProps} />React-Formsy</span>,<span className="text-nowrap"><SiReact {...iconProps} />React-DND</span>, etc.
           </li>
           <li>
-            on the backend, worked directly with <span className="text-nowrap"><SiNodedotjs {...iconProps} /> Node.js</span>, <span className="text-nowrap"><SiExpress {...iconProps} />Express</span>, <span className="text-nowrap"><SiSequelize {...iconProps} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...iconProps} />PostgresSQL</span>, and <span className="text-nowrap"><SiElasticsearch {...iconProps} />Elasticsearch</span>, both implementing new features and maintaining the API.
-          </li>
-          <li>
-            and more...
+            worked directly with <span className="text-nowrap"><SiNodedotjs {...iconProps} /> Node.js</span>, <span className="text-nowrap"><SiExpress {...iconProps} />Express</span>, <span className="text-nowrap"><SiSequelize {...iconProps} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...iconProps} />PostgresSQL</span>, and <span className="text-nowrap"><SiElasticsearch {...iconProps} />Elasticsearch</span>, both implementing new features and maintaining the API.
           </li>
         </ul>
       </div>
+      <div className="flex justify-center tracking-[0.25rem] opacity-75">...</div>
     </div>
   </div>
 }
 
 function SectionTree() {
-  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.1rem] inline-flex" }
+  const iconProps = { size: 16, color: "white", className: "ml-[0.07rem] mr-[0.15rem] inline-flex" }
 
   return <div className="p-4 w-svw h-full flex justify-center">
     <div className="w-full max-w-xl flex flex-col justify-center">
       <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
-        associate<span className="not-italic uppercase"> at ifficient</span> 
+        <span className="not-italic uppercase">Smaller</span> projects / freelance
       </h2>
       <div className="font-light text-sm md:text-base opacity-75">
         <ul className="flex flex-col gap-2 text-justify break-normal">
@@ -149,13 +145,31 @@ function SectionTree() {
             handled ad-hoc requests for implementing new features and fixing bugs.
           </li>
           <li>
-            Migrated legacy React systems by refactoring class components into functional components with <span className="text-nowrap"><SiReact {...iconProps} />React Hooks</span>.
+            migrated legacy React systems by refactoring class components into functional components with <span className="text-nowrap"><SiReact {...iconProps} />React Hooks</span>.
           </li>
           <li>
-            Helped implement a design system using <span className="text-nowrap"><SiStyledcomponents {...iconProps} />Styled Components</span> and <span className="text-nowrap"><SiStorybook {...iconProps} />Storybook</span>
+            helped implement a design system using <span className="text-nowrap"><SiStyledcomponents {...iconProps} />Styled Components</span> and <span className="text-nowrap"><SiStorybook {...iconProps} />Storybook</span>
+          </li>
+        </ul>
+      </div>
+      <div className="flex justify-center tracking-[0.25rem] opacity-75">...</div>
+    </div>
+  </div>
+}
+
+function SectionFour() {
+  return <div className="p-4 w-svw h-full flex justify-center">
+    <div className="w-full max-w-xl flex flex-col justify-center">
+      <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
+        education
+      </h2>
+      <div className="font-light text-sm md:text-base opacity-75">
+        <ul className="flex flex-col gap-2 text-justify break-normal">
+          <li>
+            bachelor’s degrees in Science & Technology and Production Engineering from the Federal Rural University of the Semi-Arid (UFERSA), Brazil.
           </li>
           <li>
-            and more...
+            coursework included differential and integral calculus, multivariable calculus, numerical analysis, computer programming, linear programming, computational modeling and simulation, among others.
           </li>
         </ul>
       </div>
