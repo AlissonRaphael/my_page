@@ -4,6 +4,7 @@ import { SiBootstrap, SiCreatereactapp, SiElasticsearch, SiExpress, SiNebula, Si
 
 import S3 from "../assets/icons/amazons3.svg"
 import BullMQ from "../assets/icons/bullmq.svg"
+import Ufersa from "../assets/icons/ufersa.png"
 
 export default function Curriculum() {
   useGSAP(() => {
@@ -75,102 +76,94 @@ function Ruler({ title }) {
   </div>
 }
 
-function SectionOne() {
-  return <div className="w-full h-full flex justify-center">
+function Section({ title, content }) {
+    return <div className="w-full h-full flex justify-center">
     <div className="p-4 w-svw md:w-full max-w-xl flex flex-col justify-center">
       <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
-        mid-level<span className="not-italic uppercase"> software developer </span> at ifficient
+        {title}
       </h2>
       <div className="font-light text-sm md:text-base opacity-75">
         <ul className="flex flex-col gap-2 text-justify break-normal">
-          <li>
-            Contributed to the implementation of a drag-and-drop page builder using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiTailwindcss {...PROPS} />TailwindCSS</span>, and <span className="text-nowrap"><SiNebula style={{ rotate: "35deg" }} {...PROPS} />Craft.js</span>.
-          </li>
-          <li>
-            Helped refactor the entire data-layer of the admin system with <span className="text-nowrap"><SiReactquery {...PROPS} />ReactQuery</span> and <span className="text-nowrap"><SiReactrouter {...PROPS} />ReactRouter</span>.
-          </li>
-          <li>
-            Refactored a batch data-processing ETL into real-time queue processing using <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>.
-          </li>
-          <li>
-            Implemented a high-volume data export pipeline with <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>, <span className="text-nowrap"><SiNodedotjs {...PROPS} /> Node-Streams</span>, and <span className="text-nowrap"><img src={S3} className="invert size-3 ml-[0.07rem] mr-[0.1rem] inline-flex" />AmazonS3</span>.
-          </li>
-          <li>
-            Migrated API to support partner integrations, improving the security layer and standardizing endpoints with <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>.
-          </li>
+          {content}
         </ul>
       </div>
-      <div className="flex justify-center tracking-[0.25rem] opacity-75">...</div>
+      <div className="flex justify-center tracking-[0.20rem] opacity-75">...</div>
     </div>
   </div>
+}
+
+function SectionOne() {
+  return <Section
+    title={<>mid-level<span className="not-italic uppercase"> software developer </span> at ifficient</>}
+    content={<>
+      <li>
+        Contributed to the implementation of a drag-and-drop page builder using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiTailwindcss {...PROPS} />Tailwindcss</span>, and <span className="text-nowrap"><SiNebula style={{ rotate: "35deg" }} {...PROPS} />Craft</span>.
+      </li>
+      <li>
+        Helped refactor the entire "data-layer" of the admin system with <span className="text-nowrap"><SiReactquery {...PROPS} />ReactQuery</span> and <span className="text-nowrap"><SiReactrouter {...PROPS} />ReactRouter</span>.
+      </li>
+      <li>
+        Refactored a batch data-processing ETL into real-time queue processing using <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>.
+      </li>
+      <li>
+        Implemented a high-volume data export pipeline with <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>, <span className="text-nowrap"><SiNodedotjs {...PROPS} /> Node-Streams</span> and <span className="text-nowrap"><img src={S3} className="invert size-3 ml-[0.07rem] mr-[0.1rem] inline-flex" />AmazonS3</span>.
+      </li>
+      <li>
+        Migrated API to support partner integrations, improving the security layer and standardizing endpoints with <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>.
+      </li>
+    </>}
+  />
 }
 
 function SectionTwo() {
-  return <div className="w-full h-full flex justify-center">
-    <div className="p-4 w-svw md:w-full max-w-xl flex flex-col justify-center">
-      <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
-        associate<span className="not-italic uppercase"> at ifficient</span> 
-      </h2>
-      <div className="font-light text-sm md:text-base opacity-75">
-        <ul className="flex flex-col gap-2 text-justify break-normal">
-          <li>
-            Actively worked on projects focused on marketing and paid traffic, implementing new features, fixing bugs, and maintaining/refactoring legacy systems.
-          </li>
-          <li>
-            Added new features, built new screens, and refactored legacy UI using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiBootstrap {...PROPS} />Bootstrap</span>, <span className="text-nowrap"><SiReactrouter {...PROPS} />ReactRouter</span>, <span className="text-nowrap"><SiCreatereactapp {...PROPS} />React-Formsy</span>,<span className="text-nowrap"><SiReact {...PROPS} />React-DND</span>, etc.
-          </li>
-          <li>
-            Worked directly with <span className="text-nowrap"><SiNodedotjs {...PROPS} /> Node.js</span>, <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>, <span className="text-nowrap"><SiSequelize {...PROPS} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...PROPS} />PostgresSQL</span>, and <span className="text-nowrap"><SiElasticsearch {...PROPS} />Elasticsearch</span>, both implementing new features and maintaining the API.
-          </li>
-        </ul>
-      </div>
-      <div className="flex justify-center tracking-[0.25rem] opacity-75">...</div>
-    </div>
-  </div>
+  return <Section
+    title={<>associate<span className="not-italic uppercase"> at ifficient</span></>}
+    content={<>
+      <li>
+        Contributed on projects focused on marketing and paid traffic, implementing new features, fixing bugs and maintaining/refactoring legacy systems.
+      </li>
+      <li>
+        Added new features and refactored legacy UI using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiBootstrap {...PROPS} />Bootstrap</span>, <span className="text-nowrap"><SiReactrouter {...PROPS} />ReactRouter</span>, <span className="text-nowrap"><SiCreatereactapp {...PROPS} />ReactFormsy</span>,<span className="text-nowrap"><SiReact {...PROPS} />ReactDND</span>, etc.
+      </li>
+      <li>
+        Worked with <span className="text-nowrap"><SiNodedotjs {...PROPS} />Node.js</span>, <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>, <span className="text-nowrap"><SiSequelize {...PROPS} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...PROPS} />PostgresSQL</span>, and <span className="text-nowrap"><SiElasticsearch {...PROPS} />Elasticsearch</span>, implementing new features and maintaining the API.
+      </li>
+    </>}
+  />
 }
 
 function SectionTree() {
-  return <div className="w-full h-full flex justify-center">
-    <div className="p-4 w-svw md:w-full max-w-xl flex flex-col justify-center">
-      <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
-        <span className="not-italic uppercase">Smaller</span> projects / freelance
-      </h2>
-      <div className="font-light text-sm md:text-base opacity-75">
-        <ul className="flex flex-col gap-2 text-justify break-normal">
-          <li>
-            Handled ad-hoc requests for implementing new features and fixing bugs.
-          </li>
-          <li>
-            Migrated legacy React systems by refactoring class components into functional components with <span className="text-nowrap"><SiReact {...PROPS} />React Hooks</span>.
-          </li>
-          <li>
-            Helped implement a design system using <span className="text-nowrap"><SiStyledcomponents {...PROPS} />Styled Components</span> and <span className="text-nowrap"><SiStorybook {...PROPS} />Storybook</span>
-          </li>
-        </ul>
-      </div>
-      <div className="flex justify-center tracking-[0.25rem] opacity-75">...</div>
-    </div>
-  </div>
+  return <Section
+    title={<><span className="not-italic uppercase">Smaller</span> projects / freelance</>}
+    content={<>
+      <li>
+        Handled ad-hoc requests for implementing new features and fixing bugs.
+      </li>
+      <li>
+        Migrated legacy React systems by refactoring class components into functional components with <span className="text-nowrap"><SiReact {...PROPS} />React Hooks</span>.
+      </li>
+      <li>
+        Helped implement a design system using <span className="text-nowrap"><SiStyledcomponents {...PROPS} />Styled Components</span> and <span className="text-nowrap"><SiStorybook {...PROPS} />Storybook</span>
+      </li>
+    </>}
+  />
 }
 
 function SectionFour() {
-  return <div className="w-full h-full flex justify-center">
-    <div className="p-4 w-svw md:w-full max-w-xl flex flex-col justify-center">
-      <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
-        education
-      </h2>
-      <div className="font-light text-sm md:text-base opacity-75">
-        <ul className="flex flex-col gap-2 text-justify break-normal">
-          <li>
-            Bachelor's degrees in Science & Technology and Production Engineering from the Federal Rural University of the Semi-Arid (UFERSA), Brazil.
-          </li>
-          <li>
-            Coursework included calculus, multivariable calculus, numerical analysis, computer programming, linear programming, computational simulation, among others.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  return <Section
+    title="education"
+    content={<>
+      <li>
+        Bachelor's degrees in Science & Technology from the <img src={Ufersa} className="h-5 w-3 inline-flex" /> Federal Rural University of the Semi-Arid, Brazil.
+      </li>
+      <li>
+        Production Engineering from the <img src={Ufersa} className="h-5 w-3 inline-flex" /> Federal Rural University of the Semi-Arid, Brazil.
+      </li>
+      <li>
+        Coursework included calculus, multivariable calculus, numerical analysis, computer & linear programming, computational simulation, among others.
+      </li>
+    </>}
+  />
 }
 
 const PROPS = {
