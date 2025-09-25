@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { SiBootstrap, SiCreatereactapp, SiElasticsearch, SiExpress, SiNebula, SiNodedotjs, SiPostgresql, SiReact, SiReactquery, SiReactrouter, SiSequelize, SiStorybook, SiStyledcomponents, SiTailwindcss } from "@icons-pack/react-simple-icons" 
+import { SiBootstrap, SiCreatereactapp, SiElasticsearch, SiExpress, SiJest, SiNebula, SiNestjs, SiNodedotjs, SiPostgresql, SiPrisma, SiReact, SiReactquery, SiReactrouter, SiSequelize, SiStorybook, SiStyledcomponents, SiTailwindcss, SiTypescript } from "@icons-pack/react-simple-icons" 
 
 import S3 from "../assets/icons/amazons3.svg"
 import BullMQ from "../assets/icons/bullmq.svg"
@@ -22,7 +22,7 @@ export default function Curriculum() {
     })
 
     curriculumTimeline.fromTo("#curriculum-main", {
-      left: 0
+      left: 0,
     }, {
       left: `-${(isMobile ? 7 : 3)*window.innerWidth}px`,
     })
@@ -39,7 +39,7 @@ export default function Curriculum() {
         <SectionTwo />
       </section>
       <section className="w-[200svw] md:w-svw h-svh relative">
-        <Ruler title="2021" />
+        <Ruler title="2020 - 2021 (2023*)" />
         <SectionTree />
       </section>
       <section className="w-[200svw] md:w-svw h-svh relative">
@@ -78,7 +78,7 @@ function Ruler({ title }) {
 
 function Section({ title, content }) {
     return <div className="w-full h-full flex justify-center">
-    <div className="p-4 w-svw md:w-full max-w-xl flex flex-col justify-center">
+    <div className="p-4 w-svw md:w-full max-w-2xl flex flex-col justify-center">
       <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
         {title}
       </h2>
@@ -97,7 +97,7 @@ function SectionOne() {
     title={<>mid-level<span className="not-italic uppercase"> software developer </span> at ifficient</>}
     content={<>
       <li>
-        Contributed to the implementation of a drag-and-drop page builder using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiTailwindcss {...PROPS} />Tailwindcss</span>, and <span className="text-nowrap"><SiNebula style={{ rotate: "35deg" }} {...PROPS} />Craft</span>.
+        Contributed to the implementation of a drag-and-drop page builder using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiTailwindcss {...PROPS} />Tailwindcss</span> and <span className="text-nowrap"><SiNebula style={{ rotate: "35deg" }} {...PROPS} />Craft</span>.
       </li>
       <li>
         Helped refactor the entire "data-layer" of the admin system with <span className="text-nowrap"><SiReactquery {...PROPS} />ReactQuery</span> and <span className="text-nowrap"><SiReactrouter {...PROPS} />ReactRouter</span>.
@@ -106,7 +106,7 @@ function SectionOne() {
         Refactored a batch data-processing ETL into real-time queue processing using <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>.
       </li>
       <li>
-        Implemented a high-volume data export pipeline with <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>, <span className="text-nowrap"><SiNodedotjs {...PROPS} /> Node-Streams</span> and <span className="text-nowrap"><img src={S3} className="invert size-3 ml-[0.07rem] mr-[0.1rem] inline-flex" />AmazonS3</span>.
+        Implemented a high-volume data export pipeline with <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>, <span className="text-nowrap"><SiNodedotjs {...PROPS} />Node-Streams</span> and <span className="text-nowrap"><img src={S3} className="invert size-3 ml-[0.07rem] mr-[0.1rem] inline-flex" />AmazonS3</span>.
       </li>
       <li>
         Migrated API to support partner integrations, improving the security layer and standardizing endpoints with <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>.
@@ -126,7 +126,7 @@ function SectionTwo() {
         Added new features and refactored legacy UI using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiBootstrap {...PROPS} />Bootstrap</span>, <span className="text-nowrap"><SiReactrouter {...PROPS} />ReactRouter</span>, <span className="text-nowrap"><SiCreatereactapp {...PROPS} />ReactFormsy</span>,<span className="text-nowrap"><SiReact {...PROPS} />ReactDND</span>, etc.
       </li>
       <li>
-        Worked with <span className="text-nowrap"><SiNodedotjs {...PROPS} />Node.js</span>, <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>, <span className="text-nowrap"><SiSequelize {...PROPS} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...PROPS} />PostgresSQL</span>, and <span className="text-nowrap"><SiElasticsearch {...PROPS} />Elasticsearch</span>, implementing new features and maintaining the API.
+        Worked with <span className="text-nowrap"><SiNodedotjs {...PROPS} />Node.js</span>, <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>, <span className="text-nowrap"><SiSequelize {...PROPS} />Sequelize</span>, <span className="text-nowrap"><SiPostgresql {...PROPS} />PostgresSQL</span> and <span className="text-nowrap"><SiElasticsearch {...PROPS} />Elasticsearch</span>, implementing new features and maintaining the API.
       </li>
     </>}
   />
@@ -143,7 +143,13 @@ function SectionTree() {
         Migrated legacy React systems by refactoring class components into functional components with <span className="text-nowrap"><SiReact {...PROPS} />React Hooks</span>.
       </li>
       <li>
-        Helped implement a design system using <span className="text-nowrap"><SiStyledcomponents {...PROPS} />Styled Components</span> and <span className="text-nowrap"><SiStorybook {...PROPS} />Storybook</span>
+        Helped implement a design system using <span className="text-nowrap"><SiStyledcomponents {...PROPS} />StyledComponents</span> and <span className="text-nowrap"><SiStorybook {...PROPS} />Storybook</span>
+      </li>
+      <li>
+        Implemented an inventory management API using <span className="text-nowrap"><SiNodedotjs {...PROPS} />Node.js</span>, <span className="text-nowrap"><SiTypescript {...PROPS} />Typescript</span>, <span className="text-nowrap"><SiNestjs {...PROPS} />Nestjs</span>, <span className="text-nowrap"><SiPrisma {...PROPS} />Prisma</span> and <span className="text-nowrap"><SiPostgresql {...PROPS} />PostgresSQL</span>
+      </li>
+      <li>
+        Contributed to increasing the test coverage of an open-source COVID-19 project using <span className="text-nowrap"><SiJest {...PROPS} />Jest</span>.
       </li>
     </>}
   />
@@ -157,7 +163,7 @@ function SectionFour() {
         Bachelor's degrees in Science & Technology from the <img src={Ufersa} className="h-5 w-3 inline-flex" /> Federal Rural University of the Semi-Arid, Brazil.
       </li>
       <li>
-        Production Engineering from the <img src={Ufersa} className="h-5 w-3 inline-flex" /> Federal Rural University of the Semi-Arid, Brazil.
+        Graduated in Production Engineering from the <img src={Ufersa} className="h-5 w-3 inline-flex" /> Federal Rural University of the Semi-Arid, Brazil.
       </li>
       <li>
         Coursework included calculus, multivariable calculus, numerical analysis, computer & linear programming, computational simulation, among others.
@@ -167,7 +173,7 @@ function SectionFour() {
 }
 
 const PROPS = {
-  size: window.innerWidth <= 768 ? 12 : 16,
+  size: window.innerWidth <= 768 ? 13 : 16,
   color: "white",
-  className: "ml-[0.07rem] mr-[0.15rem] inline-flex"
+  className: "ml-[0.07rem] mr-[0.15rem] mb-[0.1rem] inline-flex"
 }
