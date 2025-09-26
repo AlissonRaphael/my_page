@@ -1,6 +1,25 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { SiBootstrap, SiCreatereactapp, SiElasticsearch, SiExpress, SiJest, SiNebula, SiNestjs, SiNodedotjs, SiPostgresql, SiPrisma, SiReact, SiReactquery, SiReactrouter, SiSequelize, SiStorybook, SiStyledcomponents, SiTailwindcss, SiTypescript } from "@icons-pack/react-simple-icons" 
+import {
+  SiBootstrap,
+  SiCreatereactapp,
+  SiElasticsearch,
+  SiExpress,
+  SiJest,
+  SiNebula,
+  SiNestjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiReact,
+  SiReactquery,
+  SiReactrouter,
+  SiSequelize,
+  SiStorybook,
+  SiStyledcomponents,
+  SiTailwindcss,
+  SiTypescript
+} from "@icons-pack/react-simple-icons"
 
 import S3 from "../assets/icons/amazons3.svg"
 import BullMQ from "../assets/icons/bullmq.svg"
@@ -175,5 +194,5 @@ function SectionFour() {
 const PROPS = {
   size: window.innerWidth <= 768 ? 13 : 16,
   color: "white",
-  className: "ml-[0.07rem] mr-[0.15rem] mb-[0.1rem] inline-flex"
+  className: "ml-[0.07rem] mr-[0.15rem] mb-[0.1rem] inline-flex",
 }
