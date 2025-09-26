@@ -20,7 +20,7 @@ export default function Presentation() {
     })
   }, [])
 
-  return <section className="w-full h-svh relative">
+  return <section className="w-svw h-svh relative">
     <div id="presentation" className="w-full h-full flex items-center justify-center">
       <div className="max-w-2xl px-4 text-justify">
         <h1 className="font-[FreightBig] italic text-2xl sm:text-3xl md:text-4xl">
