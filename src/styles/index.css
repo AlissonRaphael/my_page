@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-@import './fonts.css';
+@import "./fonts.css";
 
 .bg-main {
-  background-color: #ff6347;
+  background-color: #f11111;
 }
 
 .text-main {
-  color: #ff6347;
+  color: #f11111;
 }
