@@ -1,4 +1,4 @@
-import { Braces, CodeXml, Combine, Container, GitBranch, GitGraph, Languages, Layers, ListChecks, SendToBack, Shapes, SquareKanban, SquareTerminal } from "lucide-react"
+import { Braces, CodeXml, Combine, GitGraph, Layers, ListChecks, SendToBack, Shapes, SquareKanban, SquareTerminal } from "lucide-react"
 import {
   SiJavascript,
   SiTypescript,
@@ -41,25 +41,32 @@ import {
   SiRedux,
 } from "@icons-pack/react-simple-icons"
 
+import TextFade from "./animations/TextFade"
+import TextUp from "./animations/TextUp"
+
 export default function Expertise() {
-  return <div className="w-svw h-full flex flex-col items-center">
+  return <div className="my-28 w-svw h-full flex flex-col items-center">
     <div className="px-4 w-full h-full max-w-3xl flex flex-col items-center gap-y-16 sm:gap-y-24">
       <Card {...GENERAL} />
-      <Card {...BACKEND} />
-      <Card {...FRONTEND} />
+      <Card {...BACKEND} lag="0.5" />
+      <Card {...FRONTEND} lag="1" />
     </div>
   </div>
 }
 
-function Card({ toptitle, title, subtitle, description, period, experience, area }) {
-  return <div className="w-full h-full">
+function Card({ toptitle, title, subtitle, description, period, experience, area, lag = 0 }) {
+  return <div className="w-full h-full" data-lag={lag}>
     <div className="pt-10 border-b-1 border-white"></div>
 
     <div className="px-6 py-4 text-xs">{toptitle}</div>
 
     <div className="px-6 flex flex-col sm:flex-row">
       <div className="flex-1/2">
-        <div className="text-3xl w-5/6">{title}</div>
+        <TextFade>
+          <div className="text-3xl w-5/6">
+            {title}
+          </div>
+        </TextFade>
       </div>
 
       <div className="flex-1/2 text-xs">
