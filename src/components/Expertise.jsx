@@ -87,18 +87,21 @@ import {
   SiPuppeteerHex,
   SiNginx,
   SiNginxHex,
+  SiMysql,
+  SiSwagger,
 } from "@icons-pack/react-simple-icons"
 
 export default function Expertise() {
-  return <div className="w-svw h-screen bg-gray-900">
-    <div className="px-4 w-full h-full max-w-3xl flex justify-center items-center">
+  return <div className="w-svw h-full">
+    <div className="px-4 w-full h-full max-w-3xl flex flex-col justify-center items-center">
       <Card {...GENERAL} />
+      <Card {...BACKEND} />
     </div>
   </div>
 }
 
 function Card({ toptitle, title, subtitle, description, period, experience, area }) {
-  return <div className="w-full h-full">
+  return <div className="mt-12 w-full h-full">
     <div className="pt-10 border-b-1 border-white"></div>
 
     <div className="px-4 py-4 flex text-xs">
@@ -148,7 +151,7 @@ const GENERAL = {
   description: {
     languages: [
       { name: "Javascript", icon: SiJavascript },
-      { name: "Typescript", icon: SiTypescript },
+      { name: "", icon: SiTypescript },
     ],
     development: [
       { name: "Client Side", icon: CodeXml, size: 12 },
@@ -170,4 +173,45 @@ const GENERAL = {
   period: "2021 - current",
   experience: "Five Years",
   area: "Fullstack",
+}
+
+const BACKEND = {
+  toptitle: "Server Side",
+  title: "Experience with server-side development",
+  subtitle: "Languages, Frameworks, Databases, Tools",
+  description: {
+    Base: [
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express", icon: SiExpress },
+      { name: "Nestjs", icon: SiNestjs },
+    ],
+    databases: [
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Redis", icon: SiRedis },
+      { name: "Elasticsearch", icon: SiElasticsearch },
+      { name: "Fauna", icon: SiFauna },
+    ],
+    ORM: [
+      { name: "Sequelize", icon: SiSequelize },
+      { name: "Prisma", icon: SiPrisma },
+      { name: "TypeORM", icon: Braces },
+    ],
+    others: [
+      { name: "Jest", icon: SiJest },
+      { name: "Swagger", icon: SiSwagger },
+      { name: "Zod", icon: SiZod },
+      { name: "Handlebars", icon: SiHandlebarsdotjs },
+    ],
+    tools: [
+      { name: "Git", icon: SiGit },
+      { name: "Docker", icon: SiDocker },
+      { name: "Kubernetes", icon: SiKubernetes },
+      { name: "ESLint", icon: SiEslint },
+      { name: "Prettier", icon: SiPrettier },
+    ]
+  },
+  period: "2021 - current",
+  experience: "Five Years",
+  area: "Backend",
 }
