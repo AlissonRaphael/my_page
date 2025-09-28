@@ -1,118 +1,173 @@
-import { CodeXml, Container } from "lucide-react"
+import { Braces, CodeXml, Combine, Container, GitBranch, GitGraph, Layers, ListChecks, SendToBack, Shapes, SquareKanban, SquareTerminal } from "lucide-react"
 import {
   SiJavascript,
+  SiJavascriptHex,
   SiTypescript,
+  SiTypescriptHex,
+  SiElixir,
+  SiElixirHex,
+  SiNodedotjs,
+  SiNodedotjsHex,
+  SiExpress,
+  SiNestjs,
+  SiNestjsHex,
+  SiPostgresql,
+  SiPostgresqlHex,
+  SiSequelize,
+  SiSequelizeHex,
+  SiPrisma,
+  SiElasticsearch,
+  SiElasticsearchHex,
+  SiRedis,
+  SiRedisHex,
+  SiJest,
+  SiJestHex,
+  SiDocker,
+  SiDockerHex,
+  SiReact,
+  SiReactHex,
+  SiNextdotjs,
+  SiWebpack,
+  SiWebpackHex,
+  SiVite,
+  SiViteHex,
   SiTailwindcss,
+  SiTailwindcssHex,
+  SiBootstrap,
+  SiBootstrapHex,
+  SiSass,
+  SiSassHex,
+  SiStorybook,
+  SiStorybookHex,
+  SiExpo,
+  SiGit,
+  SiGitHex,
+  SiEslint,
+  SiEslintHex,
+  SiAxios,
+  SiAxiosHex,
+  SiChakraui,
+  SiChakrauiHex,
   SiHtml5,
+  SiHtml5Hex,
   SiCss,
+  SiCssHex,
+  SiLogstash,
+  SiLogstashHex,
+  SiNunjucks,
+  SiNunjucksHex,
+  SiRadixui,
   SiShadcnui,
+  SiStyledcomponents,
+  SiStyledcomponentsHex,
+  SiTurborepo,
+  SiTurborepoHex,
+  SiZod,
+  SiZodHex,
+  SiHandlebarsdotjs,
+  SiPrettier,
+  SiPrettierHex,
+  SiFauna,
+  SiFaunaHex,
+  SiReactrouter,
+  SiReactrouterHex,
+  SiMongodb,
+  SiMongodbHex,
+  SiKubernetes,
+  SiKubernetesHex,
+  SiRabbitmq,
+  SiRabbitmqHex,
+  SiReactquery,
+  SiReactqueryHex,
+  SiGithubactions,
+  SiGithubactionsHex,
+  SiGnubashHex,
+  SiGnubash,
+  SiPuppeteer,
+  SiPuppeteerHex,
+  SiNginx,
+  SiNginxHex,
 } from "@icons-pack/react-simple-icons"
 
 export default function Expertise() {
   return <div className="w-svw h-screen bg-gray-900">
-    <div className="px-4 w-full h-full max-w-2xl flex justify-center items-center">
-      <Backend />
+    <div className="px-4 w-full h-full max-w-3xl flex justify-center items-center">
+      <Card {...GENERAL} />
     </div>
   </div>
 }
 
-function Backend() {
+function Card({ toptitle, title, subtitle, description, period, experience, area }) {
   return <div className="w-full h-full">
-    <div className="flex pt-10">
-      <div className="flex-1/12">
-        <Container size={30} className="stroke-2" />
-      </div>
-      <div className="flex-10/12 border-b-1 border-white"></div>
-      <div className="flex-1/12 flex justify-end items-center">
-        <CodeXml size={32} className="stroke-2" />
-      </div>
+    <div className="pt-10 border-b-1 border-white"></div>
+
+    <div className="px-4 py-4 flex text-xs">
+      {toptitle}
     </div>
 
-    <div className="flex">
-      <div className="flex-1/12"></div>
-      <div className="flex-10/12 text-xs py-4">
-        Client Side
+    <div className="px-4 flex">
+      <div className="flex-1/2">
+        <div className="text-3xl w-5/6">{title}</div>
       </div>
-      <div className="flex-1/12"></div>
-    </div>
 
-    <div className="flex">
-      <div className="flex-1/12 bg-black"></div>
-      <div className="flex-10/12 flex">
-        <div className="flex-7/12">
-          <div className="text-3xl w-5/6">
-            experience working with frontend over the last few years
+      <div className="flex-1/2 text-xs">
+        <div className="flex flex-col gap-8">
+          <div className="border-b-1 pb-12 text-[0.5rem]">
+            {subtitle}
           </div>
-        </div>
 
-        <div className="flex-5/12 text-xs">
-          <div className="flex flex-col gap-8">
-            <div className="border-b-1 pb-12 text-[0.5rem]">
-              Base, techs, tools, rameworks and libs
-            </div>
-
-            <div className="flex">
-              <div className="flex-2/6">Base</div>
-              <ul className="flex-4/6 flex flex-wrap gap-2">
-                <li>
-                  <div className="flex items-center text-white gap-[0.15rem]">
-                    <SiHtml5 size={10} color="#fff" />
-                    <span className="text-xs">HTML5</span>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-center text-white gap-[0.15rem]">
-                    <SiCss size={10} color="#fff" />
-                    <span className="text-xs">CSS3</span>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-center text-white gap-[0.15rem]">
-                    <SiJavascript size={10} color="#fff" />
-                    <span className="text-xs">Javascript</span>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-center text-white gap-[0.15rem]">
-                    <SiTypescript size={10} color="#fff" />
-                    <span className="text-xs">Typescript</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div className="flex">
-              <div className="flex-2/6">Techs</div>
-              <ul className="flex-4/6 flex flex-wrap gap-2">
-                <li>
-                  <div className="flex items-center text-white gap-[0.15rem]">
-                    <SiTailwindcss size={10} color="#fff" />
-                    <span className="text-xs">Tailwindcss</span>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-center text-white gap-[0.15rem]">
-                    <SiShadcnui size={10} color="#fff" />
-                    <span className="text-xs">Shadcn</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-          </div>
+          {Object.entries(description).map(([key, items]) => <div key={key} className="flex">
+            <div className="flex-1/2 capitalize">{key}</div>
+            <ul className="flex-1/2 flex flex-wrap gap-x-2 gap-y-1">
+              {items.map(({ name, icon: Icon, size = 10 }) => <li key={name}>
+                <div className="flex items-center text-white gap-[0.2rem]">
+                  <Icon size={size} />
+                  <span className="text-xs">{name}</span>
+                </div>
+              </li>)}
+            </ul>
+          </div>)}
         </div>
       </div>
-      <div className="flex-1/12"></div>
     </div>
 
-    <div className="flex ">
-      <div className="flex-1/12"></div>
-      <div className="flex-10/12 mt-8 pt-4 text-[0.5rem] flex items-end justify-between border-t-1 border-white">
-        <div>2021 - current</div>
-        <div className="text-base">Five Years</div>
-        <div>Frontend</div>
+    <div className="flex px-4">
+      <div className="flex-1 mt-8 pt-4 text-[0.5rem] flex items-end justify-between border-t-1 border-white">
+        <div>{period}</div>
+        <div className="text-base">{experience}</div>
+        <div>{area}</div>
       </div>
-      <div className="flex-1/12"></div>
     </div>
   </div>
+}
+
+const GENERAL = {
+  toptitle: "General",
+  title: "Core skills in web development",
+  subtitle: "Languages, Concepts",
+  description: {
+    languages: [
+      { name: "Javascript", icon: SiJavascript },
+      { name: "Typescript", icon: SiTypescript },
+    ],
+    development: [
+      { name: "Client Side", icon: CodeXml, size: 12 },
+      { name: "Server Side", icon: SquareTerminal, size: 12 },
+      { name: "Fullstack", icon: Layers, size: 12 },
+    ],
+    concepts: [
+      { name: "OOP", icon: Combine, size: 12 },
+      { name: "Clean Architecture", icon: SendToBack, size: 12 },
+      { name: "SOLID", icon: Braces, size: 12 },
+      { name: "TDD", icon: ListChecks, size: 12 },
+      { name: "DDD", icon: Shapes, size: 12 },
+      { name: "Versioning", icon: GitGraph, size: 12 },
+      { name: "Agile/Scrum", icon: SquareKanban, size: 12 },
+      { name: "Containerization", icon: SiDocker, size: 12 },
+      { name: "Orchestration", icon: SiKubernetes, size: 12 },
+    ]
+  },
+  period: "2021 - current",
+  experience: "Five Years",
+  area: "Fullstack",
 }
