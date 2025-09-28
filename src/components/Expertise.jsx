@@ -96,6 +96,7 @@ export default function Expertise() {
     <div className="px-4 w-full h-full max-w-3xl flex flex-col justify-center items-center">
       <Card {...GENERAL} />
       <Card {...BACKEND} />
+      <Card {...FRONTEND} />
     </div>
   </div>
 }
@@ -149,10 +150,6 @@ const GENERAL = {
   title: "Core skills in web development",
   subtitle: "Languages, Concepts",
   description: {
-    languages: [
-      { name: "Javascript", icon: SiJavascript },
-      { name: "", icon: SiTypescript },
-    ],
     development: [
       { name: "Client Side", icon: CodeXml, size: 12 },
       { name: "Server Side", icon: SquareTerminal, size: 12 },
@@ -180,7 +177,9 @@ const BACKEND = {
   title: "Experience with server-side development",
   subtitle: "Languages, Frameworks, Databases, Tools",
   description: {
-    Base: [
+    base: [
+      { name: "Javascript", icon: SiJavascript },
+      { name: "Typescript", icon: SiTypescript },
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Express", icon: SiExpress },
       { name: "Nestjs", icon: SiNestjs },
@@ -214,4 +213,43 @@ const BACKEND = {
   period: "2021 - current",
   experience: "Five Years",
   area: "Backend",
+}
+
+const FRONTEND = {
+  toptitle: "Server Side",
+  title: "Experience with client-side development",
+  subtitle: "Frameworks, Libs, Tools",
+  description: {
+    base: [
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: SiCss },
+      { name: "Javascript", icon: SiJavascript },
+      { name: "Typescript", icon: SiTypescript },
+    ],
+    "Frameworks / Libs": [
+      { name: "React", icon: SiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+    ],
+    styling: [
+      { name: "TailwindCSS", icon: SiTailwindcss },
+      { name: "Bootstrap", icon: SiBootstrap },
+      { name: "SASS", icon: SiSass },
+      { name: "Chakra UI", icon: SiChakraui },
+      { name: "Styled Components", icon: SiStyledcomponents },
+      { name: "Radix UI", icon: SiRadixui },
+      { name: "Shadcn/ui", icon: SiShadcnui },
+    ],
+    others: [
+      { name: "Webpack", icon: SiWebpack },
+      { name: "Vite", icon: SiVite },
+      { name: "React Query", icon: SiReactquery },
+      { name: "Redux", icon: GitBranch },
+      { name: "React Router", icon: SiReactrouter },
+      { name: "Storybook", icon: SiStorybook },
+      { name: "Jest", icon: SiJest },
+    ],
+  },
+  period: "2021 - current",
+  experience: "Five Years",
+  area: "Frontend",
 }
