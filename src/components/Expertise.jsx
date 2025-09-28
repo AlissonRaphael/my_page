@@ -42,8 +42,8 @@ import {
 } from "@icons-pack/react-simple-icons"
 
 export default function Expertise() {
-  return <div className="w-svw h-full">
-    <div className="px-4 w-full h-full max-w-3xl flex flex-col justify-center items-center">
+  return <div className="w-svw h-full flex flex-col items-center">
+    <div className="px-4 w-full h-full max-w-3xl flex flex-col items-center gap-y-16 sm:gap-y-24">
       <Card {...GENERAL} />
       <Card {...BACKEND} />
       <Card {...FRONTEND} />
@@ -52,21 +52,19 @@ export default function Expertise() {
 }
 
 function Card({ toptitle, title, subtitle, description, period, experience, area }) {
-  return <div className="mt-12 w-full h-full">
+  return <div className="w-full h-full">
     <div className="pt-10 border-b-1 border-white"></div>
 
-    <div className="px-4 py-4 flex text-xs">
-      {toptitle}
-    </div>
+    <div className="px-6 py-4 text-xs">{toptitle}</div>
 
-    <div className="px-4 flex">
+    <div className="px-6 flex flex-col sm:flex-row">
       <div className="flex-1/2">
         <div className="text-3xl w-5/6">{title}</div>
       </div>
 
       <div className="flex-1/2 text-xs">
         <div className="flex flex-col gap-8">
-          <div className="border-b-1 pb-12 text-[0.5rem]">
+          <div className="border-b-1 pb-8 sm:pb-12 pt-4 sm:pt-0 text-[0.5rem]">
             {subtitle}
           </div>
 
@@ -85,7 +83,7 @@ function Card({ toptitle, title, subtitle, description, period, experience, area
       </div>
     </div>
 
-    <div className="flex px-4">
+    <div className="px-6 flex">
       <div className="flex-1 mt-8 pt-4 text-[0.5rem] flex items-end justify-between border-t-1 border-white">
         <div>{period}</div>
         <div className="text-base">{experience}</div>
