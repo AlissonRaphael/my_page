@@ -1,14 +1,12 @@
-import Datetime from './Datetime';
-import Header from './Header';
-import ExploreAnimation from './ExploreAnimation';
-import Title from './Title';
-import Video from './Video';
+import Datetime from "./Datetime";
+import Header from "./Header";
+import ExploreAnimation from "./ExploreAnimation";
+import Video from "./Video";
 
 export default function Main() {
   return <section className="w-svw h-svh z-0 flex flex-col items-center justify-between relative">
     <Header />
     <ExploreAnimation />
-    <Title />
     <Video />
     <Datetime />
   </section>

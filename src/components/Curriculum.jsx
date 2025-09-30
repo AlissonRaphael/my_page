@@ -1,5 +1,5 @@
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import {
   SiBootstrap,
   SiCreatereactapp,
@@ -19,11 +19,11 @@ import {
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript
-} from "@icons-pack/react-simple-icons"
+} from "@icons-pack/react-simple-icons";
 
-import S3 from "../assets/icons/amazons3.svg"
-import BullMQ from "../assets/icons/bullmq.svg"
-import Ufersa from "../assets/icons/ufersa.png"
+import S3 from "../assets/icons/amazons3.svg";
+import BullMQ from "../assets/icons/bullmq.svg";
+import Ufersa from "../assets/icons/ufersa.png";
 
 export default function Curriculum() {
   useGSAP(() => {
@@ -49,24 +49,30 @@ export default function Curriculum() {
 
   return <div id="curriculum-container" className="overflow-hidden h-svh flex justify-center relative">
     <div id="curriculum-main" className="absolute left-0 top-0 w-[800svw] md:w-[400svw] h-svh flex flex-row">
-      <section className="w-[200svw] md:w-svw h-svh relative">
+      <Section>
         <Ruler title="2022 - current" />
-        <SectionOne />
-      </section>
-      <section className="w-[200svw] md:w-svw h-svh relative">
+        <ContentOne />
+      </Section>
+      <Section>
         <Ruler title="2021 - 2022" />
-        <SectionTwo />
-      </section>
-      <section className="w-[200svw] md:w-svw h-svh relative">
+        <ContentTwo />
+      </Section>
+      <Section>
         <Ruler title="2020 - 2021 (2023*)" />
-        <SectionTree />
-      </section>
-      <section className="w-[200svw] md:w-svw h-svh relative">
+        <ContentTree />
+      </Section>
+      <Section>
         <Ruler title="2020" />
-        <SectionFour />
-      </section>
+        <ContentFour />
+      </Section>
     </div>
   </div>
+}
+
+function Section({ children }) {
+  return <section className="w-[200svw] md:w-svw h-svh relative">
+    {children}
+  </section>
 }
 
 function Ruler({ title }) {
@@ -95,7 +101,7 @@ function Ruler({ title }) {
   </div>
 }
 
-function Section({ title, content }) {
+function Content({ title, content }) {
     return <div className="w-full h-full flex justify-center">
     <div className="p-4 w-svw md:w-full max-w-2xl flex flex-col justify-center">
       <h2 className="font-[FreightBig] italic text-xl sm:text-2xl md:text-3xl mb-2">
@@ -111,9 +117,9 @@ function Section({ title, content }) {
   </div>
 }
 
-function SectionOne() {
-  return <Section
-    title={<>mid-level<span className="not-italic uppercase"> software developer </span> at ifficient</>}
+function ContentOne() {
+  return <Content
+    title={<>mid-level<span className="not-italic uppercase"> developer </span>at ifficient</>}
     content={<>
       <li>
         Contributed to the implementation of a drag-and-drop page builder using <span className="text-nowrap"><SiReact {...PROPS} />React</span>, <span className="text-nowrap"><SiTailwindcss {...PROPS} />Tailwindcss</span> and <span className="text-nowrap"><SiNebula style={{ rotate: "35deg" }} {...PROPS} />Craft</span>.
@@ -134,8 +140,8 @@ function SectionOne() {
   />
 }
 
-function SectionTwo() {
-  return <Section
+function ContentTwo() {
+  return <Content
     title={<>associate<span className="not-italic uppercase"> at ifficient</span></>}
     content={<>
       <li>
@@ -151,8 +157,8 @@ function SectionTwo() {
   />
 }
 
-function SectionTree() {
-  return <Section
+function ContentTree() {
+  return <Content
     title={<><span className="not-italic uppercase">Smaller</span> projects / freelance</>}
     content={<>
       <li>
@@ -174,8 +180,8 @@ function SectionTree() {
   />
 }
 
-function SectionFour() {
-  return <Section
+function ContentFour() {
+  return <Content
     title="education"
     content={<>
       <li>

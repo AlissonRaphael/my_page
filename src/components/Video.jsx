@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-import Desktop from '../assets/desktop.mp4';
-import Mobile from '../assets/mobile.mp4';
+import Desktop from "../assets/desktop.mp4";
+import Mobile from "../assets/mobile.mp4";
 
 export default function Video() {
   const [mobile, setMobile] = useState(false)

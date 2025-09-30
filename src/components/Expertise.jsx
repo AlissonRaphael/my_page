@@ -1,4 +1,4 @@
-import { Braces, CodeXml, Combine, GitGraph, Layers, ListChecks, SendToBack, Shapes, SquareKanban, SquareTerminal } from "lucide-react"
+import { Braces, CodeXml, Combine, GitGraph, Layers, ListChecks, SendToBack, Shapes, SquareKanban, SquareTerminal } from "lucide-react";
 import {
   SiJavascript,
   SiTypescript,
@@ -39,10 +39,9 @@ import {
   SiMysql,
   SiSwagger,
   SiRedux,
-} from "@icons-pack/react-simple-icons"
+} from "@icons-pack/react-simple-icons";
 
-import TextFade from "./animations/TextFade"
-import TextUp from "./animations/TextUp"
+import TextFade from "./animations/TextFade";
 
 export default function Expertise() {
   return <div className="my-28 w-svw h-full flex flex-col items-center">
@@ -103,7 +102,7 @@ function Card({ toptitle, title, subtitle, description, period, experience, area
 const GENERAL = {
   toptitle: "General",
   title: "Core skills in web development",
-  subtitle: "Development, Concepts",
+  subtitle: "Development, Concepts, Tools",
   description: {
     development: [
       { name: "Client Side", icon: CodeXml, size: 12 },
@@ -135,7 +134,7 @@ const GENERAL = {
 
 const BACKEND = {
   toptitle: "Server Side",
-  title: "Experience with server-side development",
+  title: "Experience with backend development",
   subtitle: "Base, Frameworks, Databases, Tools",
   description: {
     language: [
@@ -174,8 +173,8 @@ const BACKEND = {
 
 const FRONTEND = {
   toptitle: "Server Side",
-  title: "Experience with client-side development",
-  subtitle: "Frameworks, Libs, Tools",
+  title: "Experience with frontend development",
+  subtitle: "Frameworks, Libs, Styling",
   description: {
     base: [
       { name: "HTML5", icon: SiHtml5 },
