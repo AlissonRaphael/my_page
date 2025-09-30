@@ -7,6 +7,7 @@ import "./styles/index.css";
 import Main from "./components/Main";
 import Presentation from "./components/Presentation";
 import Expertise from "./components/Expertise";
+import Footer from "./components/Footer";
 import Curriculum from "./components/Curriculum";
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
       <Presentation />
       <Curriculum />
       <Expertise />
+      <Footer />
     </div>
   </div>
 }
