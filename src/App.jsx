@@ -6,6 +6,7 @@ import "./styles/index.css";
 
 import Main from "./components/Main";
 import Presentation from "./components/Presentation";
+import Expertise from "./components/Expertise";
 import Curriculum from "./components/Curriculum";
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
       <Main />
       <Presentation />
       <Curriculum />
+      <Expertise />
     </div>
   </div>
 }
