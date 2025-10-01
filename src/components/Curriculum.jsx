@@ -128,10 +128,10 @@ function ContentOne() {
         Helped refactor the entire "data-layer" of the admin system with <span className="text-nowrap"><SiReactquery {...PROPS} />ReactQuery</span> and <span className="text-nowrap"><SiReactrouter {...PROPS} />ReactRouter</span>.
       </li>
       <li>
-        Refactored a batch data-processing ETL into real-time queue processing using <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>.
+        Refactored a batch data-processing ETL into real-time queue processing using <span className="text-nowrap"><img src={BullMQ} className="invert size-5 mb-[0.15rem] ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>.
       </li>
       <li>
-        Implemented a high-volume data export pipeline with <span className="text-nowrap"><img src={BullMQ} className="invert size-5 ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>, <span className="text-nowrap"><SiNodedotjs {...PROPS} />Node-Streams</span> and <span className="text-nowrap"><img src={S3} className="invert size-3 ml-[0.07rem] mr-[0.1rem] inline-flex" />AmazonS3</span>.
+        Implemented a high-volume data export pipeline with <span className="text-nowrap"><img src={BullMQ} className="invert size-5 mb-[0.15rem] ml-[0.07rem] mr-[0.1rem] inline-flex" />BullMQ</span>, <span className="text-nowrap"><SiNodedotjs {...PROPS} />Node-Streams</span> and <span className="text-nowrap"><img src={S3} className="invert size-3 mb-[0.1rem] ml-[0.07rem] mr-[0.1rem] inline-flex" />AmazonS3</span>.
       </li>
       <li>
         Migrated API to support partner integrations, improving the security layer and standardizing endpoints with <span className="text-nowrap"><SiExpress {...PROPS} />Express</span>.
