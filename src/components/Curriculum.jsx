@@ -50,15 +50,15 @@ export default function Curriculum() {
   return <div id="curriculum-container" className="overflow-hidden h-svh flex justify-center relative">
     <div id="curriculum-main" className="absolute left-0 top-0 w-[800svw] md:w-[400svw] h-svh flex flex-row">
       <Section>
-        <Ruler title="2022 - current" />
+        <Ruler title="2023 - current" />
         <ContentOne />
       </Section>
       <Section>
-        <Ruler title="2021 - 2022" />
+        <Ruler title="2021 - 2023" />
         <ContentTwo />
       </Section>
       <Section>
-        <Ruler title="2020 - 2021 (2023*)" />
+        <Ruler title="2020 - 2021/22/23" />
         <ContentTree />
       </Section>
       <Section>
