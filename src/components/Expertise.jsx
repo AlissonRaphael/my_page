@@ -44,7 +44,7 @@ import {
 import TextFade from "./animations/TextFade";
 
 export default function Expertise() {
-  return <div className="my-28 w-svw h-full flex flex-col items-center">
+  return <div id="expertise" className="my-28 w-svw h-full flex flex-col items-center">
     <div className="px-4 w-full h-full max-w-3xl flex flex-col items-center gap-y-16 sm:gap-y-24">
       <Card {...GENERAL} />
       <Card {...BACKEND} lag="0.5" />

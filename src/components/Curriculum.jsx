@@ -31,7 +31,7 @@ export default function Curriculum() {
 
     const curriculumTimeline = gsap.timeline({
       scrollTrigger: {
-        trigger: "#curriculum-container",
+        trigger: "#curriculum",
         scroller: "#smooth-wrapper",
         pin: true,
         scrub: true,
@@ -47,7 +47,7 @@ export default function Curriculum() {
     })
   }, [])
 
-  return <div id="curriculum-container" className="overflow-hidden h-svh flex justify-center relative">
+  return <div id="curriculum" className="overflow-hidden h-svh flex justify-center relative">
     <div id="curriculum-main" className="absolute left-0 top-0 w-[800svw] md:w-[400svw] h-svh flex flex-row">
       <Section>
         <Ruler title="2023 - current" />

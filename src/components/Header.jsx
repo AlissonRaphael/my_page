@@ -43,15 +43,15 @@ export default function Header() {
       </li>
       <li className="py-2 not-first:w-full border-t-1 border-white uppercase flex items-center" >
         <div className="h-full w-[4px] md:w-[6px] bg-white rounded-[1px] mr-[0.25rem] md:mr-[0.5rem]">.</div>
-        <a href="/#start">start</a>
+        <a href="#start">start</a>
       </li>
       <li className="py-2 w-full border-t-1 border-white uppercase flex items-center">
         <div className="h-full w-[4px] md:w-[6px] bg-white rounded-[1px] mr-[0.25rem] md:mr-2">.</div>
-        <a href="/#about">about</a>
+        <a href="#curriculum">curriculum</a>
       </li>
       <li className="py-2 w-full border-t-1 border-white uppercase flex items-center">
         <div className="h-full w-[4px] md:w-[6px] bg-white rounded-[1px] mr-[0.25rem] md:mr-[0.5rem]">.</div>
-        <a href="/#repo">repos</a>
+        <a href="#expertise">expertise</a>
       </li>
     </ul>
   </header>
